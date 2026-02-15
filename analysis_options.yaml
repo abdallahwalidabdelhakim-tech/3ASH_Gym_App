@@ -1,0 +1,41 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # Strong mode rules
+    prefer_const_constructors: true
+    prefer_const_literals_to_create_immutables: true
+    use_key_in_widget_constructors: true
+    avoid_print: true
+    prefer_single_quotes: true
+    unnecessary_this: true
+    unnecessary_new: true
+    unnecessary_brace_in_string_interps: true
+    avoid_unused_constructor_parameters: true
+    prefer_final_fields: true
+    prefer_final_locals: true
+    unnecessary_await_in_return: true
+    
+    # Performance rules
+    use_decorated_box: true
+    use_late_for_private_fields_and_variables: true
+    avoid_double_and_int_checks: true
+    
+    # Style rules
+    require_trailing_commas: true
+    sort_child_properties_last: true
+    sort_constructors_first: true
+    sort_unnamed_constructors_first: true
+    lines_longer_than_80_chars: false  # Allow longer lines for readability
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options

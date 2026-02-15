@@ -1,0 +1,70 @@
+{
+  "version": 1.0,
+  "categories": [
+    {
+      "name": "Chest",
+      "exercises": [
+        {
+          "name": "Bench Press (Cable)",
+          "mainImageUrl": "assets/images/exercises/Bench Press (Cable).png",
+          "videoUrl": "assets/videos/bench_press_cable.mp4",
+          "instructions": [
+            "Place a flat gym bench in the middle of a double cable machine.",
+            "Adjust the load on both weight stacks, position the pulleys low, and attach handles.",
+            "Grab both handles and sit on the bench while keeping your arms close to your body.",
+            "Lie back carefully and bring your arms to your sides without flaring your elbows.",
+            "Bring your shoulders back, engage your abs, and take a breath.",
+            "Push both handles up and in, tapping your knuckles at the top as you exhale.",
+            "Lower the weights carefully until your elbows are at torso level, and breathe in.",
+            "Once finished, bring your arms in, get up slowly, and release both handles."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Bench Press (Cable).png",
+            "assets/images/exercises/Bench Press (Cable).png",
+            "assets/images/exercises/Bench Press (Cable).png"
+          ]
+        },
+        {
+          "name": "Bench Press (Smith Machine)",
+          "mainImageUrl": "assets/images/exercises/Bench Press (Smith Machine).png",
+          "videoUrl": "assets/videos/bench_press_smith_machine.mp4",
+          "instructions": [
+            "Place a flat gym bench in the middle of a Smith machine.",
+            "Adjust the bar to a height where you can grab and unrack it from a lying position.",
+            "Lie on the bench and position your lower chest directly underneath the bar.",
+            "Grab the bar with an even overhand grip.",
+            "Bring your shoulders back and dig the balls of your feet into the floor.",
+            "Take a breath and unrack the bar.",
+            "Lower the bar until it taps your chest and press it to the top as you exhale."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Bench Press (Smith Machine).png",
+            "assets/images/exercises/Bench Press (Smith Machine).png",
+            "assets/images/exercises/Bench Press (Smith Machine).png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cardio",
+      "exercises": [
+        {
+          "name": "Treadmill Run",
+          "mainImageUrl": "assets/images/exercises/treadmill.png",
+          "videoUrl": "assets/videos/treadmill_run.mp4",
+          "instructions": [
+            "Stand on the treadmill and clip the safety key to your tank top or T-shirt.",
+            "Start the treadmill and gradually increase the speed from slow walking to a jog.",
+            "Maintain an upright posture, direct your gaze forward, and maintain a steady breath.",
+            "Keep your arms bent and move them in sync with your strides."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/treadmill.png",
+            "assets/images/exercises/treadmill.png",
+            "assets/images/exercises/treadmill.png"
+          ]
+        }
+      ]
+    }
+  ]
+}
