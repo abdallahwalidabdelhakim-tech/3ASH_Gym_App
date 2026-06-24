@@ -483,6 +483,11 @@ class AuthService {
     await _storage.delete(key: _tokenKey);
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove('auth_token'); // Clean up old storage if exists
+    
+    // Clear mock tokens if using mock backend
+    if (AppConfig.useMockBackend) {
+      await MockAuthService.clearTokens();
+    }
   }
 
   /// Checks if user is authenticated

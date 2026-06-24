@@ -8,26 +8,17 @@ class AppConstants {
   /// Used for country selection in user registration and profile management.
   /// The list includes countries from all major regions of the world.
   static const List<String> countries = [
-    // Asia
-    'Afghanistan', 'Bahrain', 'Bangladesh', 'China', 'India', 'Indonesia', 
-    'Iran', 'Iraq', 'Israel', 'Japan', 'Jordan', 'Kuwait', 'Lebanon', 'Libya', 
-    'Malaysia', 'Pakistan', 'Palestine', 'Philippines', 'Qatar', 'Saudi Arabia', 
-    'Singapore', 'South Korea', 'Syria', 'Thailand', 'Turkey', 'United Arab Emirates', 
-    'Vietnam', 'Yemen',
-    
-    // Africa
-    'Algeria', 'Egypt', 'Morocco', 'Nigeria', 'South Africa', 'Tunisia', 'Zimbabwe',
-    
-    // Europe
-    'Albania', 'Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Czech Republic', 
-    'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 
-    'Iceland', 'Ireland', 'Italy', 'Netherlands', 'Norway', 'Poland', 'Portugal', 
-    'Romania', 'Russia', 'Spain', 'Sweden', 'Switzerland', 'Ukraine', 'United Kingdom',
-    
-    // Americas
-    'Argentina', 'Brazil', 'Canada', 'Chile', 'Colombia', 'Mexico', 'United States', 'Venezuela',
-    
-    // Oceania
-    'Australia', 'New Zealand',
+    'Afghanistan', 'Albania', 'Algeria', 'Argentina', 'Australia', 'Austria',
+    'Bahrain', 'Bangladesh', 'Belgium', 'Brazil', 'Bulgaria', 'Canada',
+    'Chile', 'China', 'Colombia', 'Croatia', 'Czech Republic', 'Denmark',
+    'Egypt', 'Estonia', 'Finland', 'France', 'Germany', 'Greece',
+    'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq',
+    'Ireland', 'Israel', 'Italy', 'Japan', 'Jordan', 'Kuwait',
+    'Lebanon', 'Libya', 'Malaysia', 'Mexico', 'Morocco', 'Netherlands',
+    'New Zealand', 'Nigeria', 'Norway', 'Pakistan', 'Palestine', 'Philippines',
+    'Poland', 'Portugal', 'Qatar', 'Romania', 'Russia', 'Saudi Arabia',
+    'Singapore', 'South Africa', 'South Korea', 'Spain', 'Sweden', 'Switzerland',
+    'Syria', 'Thailand', 'Tunisia', 'Turkey', 'Ukraine', 'United Arab Emirates',
+    'United Kingdom', 'United States', 'Venezuela', 'Vietnam', 'Yemen', 'Zimbabwe',
   ];
 }

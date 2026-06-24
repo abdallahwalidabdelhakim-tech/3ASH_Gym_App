@@ -175,7 +175,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             onTap: () {
               showAboutDialog(
                 context: context,
-                applicationName: localizations?.translate('app_name') ?? 'Boda App',
+                applicationName: localizations?.translate('app_name') ?? '3ASH App',
                 applicationVersion: '1.0.0',
                 applicationIcon: const Icon(Icons.fitness_center),
                 children: [

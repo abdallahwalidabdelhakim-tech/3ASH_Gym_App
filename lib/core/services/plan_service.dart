@@ -3,6 +3,7 @@
 /// Handles local storage and management of user's workout plans using shared preferences.
 /// Provides functionality to save, retrieve, and manage program and custom workout plans.
 library;
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'dart:async';
@@ -70,14 +71,30 @@ class PlanService {
   }
 
 
-  /// Gets the current saved workout plan
+   /// Gets the current saved workout plan
   /// 
   /// Returns: Future with plan data as Map or null
   static Future<Map<String, dynamic>?> getPlan() async {
     final prefs = await SharedPreferences.getInstance();
     final planJson = prefs.getString(_planKey);
     if (planJson == null) return null;
-    return jsonDecode(planJson) as Map<String, dynamic>;
+    final plan = jsonDecode(planJson) as Map<String, dynamic>;
+    debugPrint('Plan type: ${plan['type']}');
+    debugPrint('Workout days count: ${(plan['workoutDays'] as List?)?.length}');
+    if (plan['workoutDays'] != null) {
+      for (var i = 0; i < (plan['workoutDays'] as List).length; i++) {
+        final day = (plan['workoutDays'] as List)[i];
+        debugPrint('Day $i title: ${day['title']}');
+        debugPrint('Day $i exercises count: ${(day['exercises'] as List?)?.length}');
+        if (day['exercises'] != null) {
+          for (var j = 0; j < (day['exercises'] as List).length; j++) {
+            final exercise = (day['exercises'] as List)[j];
+            debugPrint('Exercise $j: $exercise');
+          }
+        }
+      }
+    }
+    return plan;
   }
 
   /// Gets the start date of the current plan

@@ -25,7 +25,8 @@ class _FoodAiScreenState extends State<FoodAiScreen> {
   // State variables for managing image and analysis results
   File? _selectedImage;
   bool _isAnalyzing = false;
-  List<dynamic>? _predictions;
+  List<dynamic>? _foodItems;
+  int? _totalCalories;
   String? _error;
 
   /// Handles image picking from camera or gallery
@@ -37,7 +38,8 @@ class _FoodAiScreenState extends State<FoodAiScreen> {
       if (image != null) {
         setState(() {
           _selectedImage = File(image.path);
-          _predictions = null;
+          _foodItems = null;
+          _totalCalories = null;
           _error = null;
         });
       }
@@ -59,9 +61,10 @@ class _FoodAiScreenState extends State<FoodAiScreen> {
 
     try {
       final result = await _aiService.analyzeFood(_selectedImage!);
-      if (result['success'] == true && result.containsKey('predictions')) {
+      if (result['success'] == true && result.containsKey('food_items')) {
         setState(() {
-          _predictions = result['predictions']; // Expecting List
+          _foodItems = result['food_items'] as List<dynamic>;
+          _totalCalories = result['total_calories'] as int?;
         });
       } else {
         setState(() {
@@ -70,7 +73,7 @@ class _FoodAiScreenState extends State<FoodAiScreen> {
       }
     } catch (e) {
       setState(() {
-        _error = e.toString();
+        _error = e.toString().replaceFirst('Exception: ', '');
       });
     } finally {
       setState(() {
@@ -222,19 +225,45 @@ class _FoodAiScreenState extends State<FoodAiScreen> {
               ),
 
             // Analysis Results
-            if (_predictions != null) ...[
+            if (_foodItems != null) ...[
+              // Total Calories Display
+              if (_totalCalories != null)
+                Container(
+                  margin: const EdgeInsets.only(bottom: 16),
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFD5FF5F),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.local_fire_department, color: Colors.black, size: 32),
+                      const SizedBox(width: 12),
+                      Text(
+                        '$_totalCalories kcal',
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Results',
+                  'Food Items',
                   style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
                 ),
               ),
               const SizedBox(height: 16),
-              ..._predictions!.map((pred) {
-                final label = pred['label'] as String;
-                final score = (pred['score'] as num).toDouble();
-                final percentage = (score * 100).toStringAsFixed(1);
+              ..._foodItems!.map((item) {
+                final name = item['name'] as String? ?? 'Unknown';
+                final quantity = item['quantity'] as String? ?? '';
+                final calories = item['calories'] as int? ?? 0;
 
                 return Container(
                   margin: const EdgeInsets.only(bottom: 12),
@@ -250,38 +279,42 @@ class _FoodAiScreenState extends State<FoodAiScreen> {
                       ),
                     ],
                   ),
-                  child: Column(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            label.toUpperCase(),
-                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                          ),
-                          Text(
-                            '$percentage%',
-                            style: TextStyle(
-                              color: theme.colorScheme.primary,
-                              fontWeight: FontWeight.bold,
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              name.toUpperCase(),
+                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                             ),
-                          ),
-                        ],
+                            if (quantity.isNotEmpty) ...[
+                              const SizedBox(height: 4),
+                              Text(
+                                quantity,
+                                style: TextStyle(
+                                  color: isDark ? Colors.grey[400] : Colors.grey[600],
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ],
+                          ],
+                        ),
                       ),
-                      const SizedBox(height: 8),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(4),
-                        child: LinearProgressIndicator(
-                          value: score,
-                          backgroundColor: isDark ? Colors.grey[800] : Colors.grey[100],
-                          color: const Color(0xFFD5FF5F),
-                          minHeight: 8,
+                      Text(
+                        '$calories kcal',
+                        style: TextStyle(
+                          color: theme.colorScheme.primary,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
                         ),
                       ),
                     ],
                   ),
                 );
-              }).take(5), // Show top 5 predictions
+              }),
             ]
           ],
         ),

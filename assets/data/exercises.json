@@ -42,6 +42,1451 @@
             "assets/images/exercises/Bench Press (Smith Machine).png",
             "assets/images/exercises/Bench Press (Smith Machine).png"
           ]
+        },
+        {
+          "name": "Butterfly (Pec Deck)",
+          "mainImageUrl": "assets/images/exercises/Butterfly (Pec Deck).png",
+          "videoUrl": "assets/videos/butterfly_pec_deck.mp4",
+          "instructions": [
+            "Select the load on the pec deck machine.",
+            "Adjust the seat height so you can grab the handles and have the pads in front of your chest.",
+            "Sit down, grab the handles, and bring your shoulders back.",
+            "Engage your abs and take a breath.",
+            "Flex your chest muscles to bring the handles from your sides to in front of your torso as you breathe out.",
+            "Bring your arms to your sides as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Butterfly (Pec Deck).png",
+            "assets/images/exercises/Butterfly (Pec Deck).png",
+            "assets/images/exercises/Butterfly (Pec Deck).png"
+          ]
+        },
+        {
+          "name": "Cable Fly Crossovers",
+          "mainImageUrl": "assets/images/exercises/Cable Fly Crossovers.png",
+          "videoUrl": "assets/videos/cable_fly_crossovers.mp4",
+          "instructions": [
+            "Adjust the load on the pair of weight stacks inside the cable crossover machine.",
+            "Set the pulleys in the highest position and attach handles on both.",
+            "Grab the handles one at a time and position yourself in the middle between the two pillars.",
+            "Bring your arms to your sides and take a half step forward to lift the weights from their stacks.",
+            "Engage your abs, bring your shoulders back, and inhale.",
+            "Bring your arms in and down, meeting your knuckles in front of your hips. Exhale.",
+            "Hold for a moment and bring your arms to your sides as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Cable Fly Crossovers.png",
+            "assets/images/exercises/Cable Fly Crossovers.png",
+            "assets/images/exercises/Cable Fly Crossovers.png"
+          ]
+        },
+        {
+          "name": "Chest Dip (Assisted)",
+          "mainImageUrl": "assets/images/exercises/Chest Dip (Assisted).png",
+          "videoUrl": "assets/videos/chest_dip_assisted.mp4",
+          "instructions": [
+            "Select the correct weight on the chest dip machine.",
+            "Grab the pair of handles and place your knees over the pads.",
+            "Extend your arms, bring your shoulders back, and squeeze your abs.",
+            "Take a breath and lower yourself by bending your elbows.",
+            "Descend until your elbows are at roughly 90 degrees, and push yourself back to the top as you exhale."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Chest Dip (Assisted).png",
+            "assets/images/exercises/Chest Dip (Assisted).png",
+            "assets/images/exercises/Chest Dip (Assisted).png"
+          ]
+        },
+        {
+          "name": "Chest Dip (Weighted)",
+          "mainImageUrl": "assets/images/exercises/Chest Dip (Weighted).png",
+          "videoUrl": "assets/videos/chest_dip_weighted.mp4",
+          "instructions": [
+            "Attach a weight plate to yourself via a special belt.",
+            "Step on the platform and grab the parallel bars while keeping your arms straight and close to your body.",
+            "Bring your shoulders back and down, engage your abs, and squeeze your glutes.",
+            "Take your feet off the platform to suspend yourself in the air.",
+            "Lean forward slightly.",
+            "Take a breath and lower yourself by bending your elbows. Keep your shoulder blades retracted and your body steady.",
+            "Descend until your elbows form a 90-degree angle and hold for a moment.",
+            "Press yourself back to the top, extending your arms fully and exhaling."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Chest Dip (Weighted).png",
+            "assets/images/exercises/Chest Dip (Weighted).png",
+            "assets/images/exercises/Chest Dip (Weighted).png"
+          ]
+        },
+        {
+          "name": "Chest Fly (Machine)",
+          "mainImageUrl": "assets/images/exercises/Chest Fly (Machine).png",
+          "videoUrl": "assets/videos/chest_fly_machine.mp4",
+          "instructions": [
+            "Select the appropriate load and adjust the seat height. The machine's handles should be at chest level when you sit.",
+            "Sit down, bring your shoulders back, and reach to the sides to grab the handles.",
+            "Engage your abs and take a breath.",
+            "Squeeze your chest and bring your arms in, tapping your knuckles lightly in front of your chest as you breathe out.",
+            "Bring your arms to your sides, feeling your chest muscles stretch. Breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Chest Fly (Machine).png",
+            "assets/images/exercises/Chest Fly (Machine).png",
+            "assets/images/exercises/Chest Fly (Machine).png"
+          ]
+        },
+        {
+          "name": "Chest Press (Machine)",
+          "mainImageUrl": "assets/images/exercises/Chest Press (Machine).png",
+          "videoUrl": "assets/videos/chest_press_machine.mp4",
+          "instructions": [
+            "Select the appropriate load on the machine.",
+            "Adjust the seat height. The handles should be slightly below your lower chest when you sit down.",
+            "Sit down, grab the handles, bring your shoulders back, and engage your abs. Have your feet flat on the floor.",
+            "Take a breath and press until your arms extend fully. Exhale.",
+            "Bend your arms slowly as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Chest Press (Machine).png",
+            "assets/images/exercises/Chest Press (Machine).png",
+            "assets/images/exercises/Chest Press (Machine).png"
+          ]
+        },
+        {
+          "name": "Decline Bench Press (Machine)",
+          "mainImageUrl": "assets/images/exercises/Decline Bench Press (Machine).png",
+          "videoUrl": "assets/videos/decline_bench_press_machine.mp4",
+          "instructions": [
+            "Load the machine appropriately.",
+            "Set the seat height for the handles to be just below chest level when you sit down.",
+            "Sit down and grab the handles. Keep your elbows tucked at your sides.",
+            "Retract your shoulder blades, plant your feet on the floor, squeeze your abs, and inhale.",
+            "Press the handles forward and down, fully extending your elbows and exhaling. Pause briefly and squeeze your chest.",
+            "Slowly bend your arms as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Decline Bench Press (Machine).png",
+            "assets/images/exercises/Decline Bench Press (Machine).png",
+            "assets/images/exercises/Decline Bench Press (Machine).png"
+          ]
+        },
+        {
+          "name": "Decline Bench Press (Smith Machine)",
+          "mainImageUrl": "assets/images/exercises/Decline Bench Press (Smith Machine).png",
+          "videoUrl": "assets/videos/decline_bench_press_smith_machine.mp4",
+          "instructions": [
+            "Position a decline bench underneath a Smith machine. The bench should be positioned so that the bar is above your lower chest when you lie back.",
+            "Load the bar appropriately and have it at a height where you can reach it from a lying position.",
+            "Lie back, grab the bar with a double overhand grip, and retract your shoulders.",
+            "Unrack the bar by extending your arms.",
+            "Take a breath and lower the bar to your chest.",
+            "Press the bar to the top position and exhale."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Decline Bench Press (Smith Machine).png",
+            "assets/images/exercises/Decline Bench Press (Smith Machine).png",
+            "assets/images/exercises/Decline Bench Press (Smith Machine).png"
+          ]
+        },
+        {
+          "name": "Incline Chest Press (Machine)",
+          "mainImageUrl": "assets/images/exercises/Incline Chest Press (Machine).png",
+          "videoUrl": "assets/videos/incline_chest_press_machine.mp4",
+          "instructions": [
+            "Add the appropriate amount of weight.",
+            "Adjust the seat height so you can comfortably grab the handles and keep your elbows tucked as you sit down.",
+            "Sit down, plant your feet on the floor, and grab the handles.",
+            "Retract your shoulder blades, engage your abs, and take a breath.",
+            "Press the handles up and overhead in one fluid motion, exhaling at the top.",
+            "Slowly bend your arms as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Incline Chest Press (Machine).png",
+            "assets/images/exercises/Incline Chest Press (Machine).png",
+            "assets/images/exercises/Incline Chest Press (Machine).png"
+          ]
+        },
+        {
+          "name": "Iso-Lateral Chest Press (Machine)",
+          "mainImageUrl": "assets/images/exercises/Iso-Lateral Chest Press (Machine).png",
+          "videoUrl": "assets/videos/iso-lateral_chest_press_machine.mp4",
+          "instructions": [
+            "Add the appropriate weight to the machine.",
+            "Adjust the seat height. You should be able to press without flaring your elbows.",
+            "Sit down and grab the handles with an overhand grip (palms facing down).",
+            "Bring your shoulders back, plant your feet on the floor, and take a breath.",
+            "Press the handles forward and up, exhaling as your arms straighten.",
+            "Bend your elbows as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Iso-Lateral Chest Press (Machine).png",
+            "assets/images/exercises/Iso-Lateral Chest Press (Machine).png",
+            "assets/images/exercises/Iso-Lateral Chest Press (Machine).png"
+          ]
+        },
+        {
+          "name": "Low Cable Fly Crossovers",
+          "mainImageUrl": "assets/images/exercises/Low Cable Fly Crossovers.png",
+          "videoUrl": "assets/videos/low_cable_fly_crossovers.mp4",
+          "instructions": [
+            "Select the appropriate load.",
+            "Set the pulleys in the lowest position and attach handles.",
+            "Grab both handles one at a time and stand in the middle with your arms to your sides.",
+            "Stagger your stance, bring your shoulders back, and squeeze your abs.",
+            "Take a breath and bring your arms up and in, tapping the handles lightly as you squeeze your chest and breathe out.",
+            "Slowly bring your arms to your sides as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Low Cable Fly Crossovers.png",
+            "assets/images/exercises/Low Cable Fly Crossovers.png",
+            "assets/images/exercises/Low Cable Fly Crossovers.png"
+          ]
+        },
+        {
+          "name": "Seated Chest Flys (Cable)",
+          "mainImageUrl": "assets/images/exercises/Seated Chest Flys (Cable).png",
+          "videoUrl": "assets/videos/seated_chest_flys_cable.mp4",
+          "instructions": [
+            "Select the same weight on both stacks of a double cable machine.",
+            "Set both pulleys at the same height roughly stomach level.",
+            "Attach handles to both pulleys and position an upright bench facing away and in front of the cable machine.",
+            "Grab the handles one by one, walk over to the gym bench, and sit down.",
+            "Extend your arms in front of your body, retract your shoulder blades, inhale, and squeeze your abs.",
+            "Slowly bring your arms to your sides until you feel a stretch in your chest muscles.",
+            "Bring your hands together and flex your chest as you exhale."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Seated Chest Flys (Cable).png",
+            "assets/images/exercises/Seated Chest Flys (Cable).png",
+            "assets/images/exercises/Seated Chest Flys (Cable).png"
+          ]
+        },
+        {
+          "name": "Single Arm Cable Crossover",
+          "mainImageUrl": "assets/images/exercises/Single Arm Cable Crossover.png",
+          "videoUrl": "assets/videos/single_arm_cable_crossover.mp4",
+          "instructions": [
+            "Set the pulley at chest height and attach a handle.",
+            "Select the appropriate load.",
+            "Grab the handle, step away from the machine, and turn your side to it. The cable pulley should be to your side and slightly behind your body.",
+            "Bring your shoulders back, breathe in, and engage your abs.",
+            "With your arm slightly bent and to the side, bring the cable in front of your torso. Squeeze your chest and exhale.",
+            "Slowly bring your arm to the side and breathe in.",
+            "Once finished, grab the handle with your other hand, have the pulley at your side and slightly behind your body, and do the same number of reps."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Single Arm Cable Crossover.png",
+            "assets/images/exercises/Single Arm Cable Crossover.png",
+            "assets/images/exercises/Single Arm Cable Crossover.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Upper back",
+      "exercises": [
+        {
+          "name": "Shrug (Cable)",
+          "mainImageUrl": "assets/images/exercises/Shrug (Cable).png",
+          "videoUrl": "assets/videos/shrug_cable.mp4",
+          "instructions": [
+            "Set the pulley to the lowest position and attach a straight bar.",
+            "Select the appropriate weight.",
+            "Lean forward and grab the straight bar with an overhand grip (palms facing your body).",
+            "Stand up and step back to lift the weight off its stack.",
+            "Bring your shoulders back, squeeze your glutes, and engage your abs.",
+            "Take a breath and shrug, lifting your shoulder blades. Exhale at the top.",
+            "Slowly lower your shoulder blades as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Shrug (Cable).png",
+            "assets/images/exercises/Shrug (Cable).png",
+            "assets/images/exercises/Shrug (Cable).png"
+          ]
+        },
+        {
+          "name": "Shrug (Machine)",
+          "mainImageUrl": "assets/images/exercises/Shrug (Machine).png",
+          "videoUrl": "assets/videos/shrug_machine.mp4",
+          "instructions": [
+            "Add the appropriate load to the machine.",
+            "Stand between the handles, grab them, and stand tall.",
+            "With your arms straight and at your sides, take a deep breath and engage your abs.",
+            "Shrug your shoulders up in one fluid motion, exhaling at the top. Don’t bend your elbows.",
+            "Lower your shoulder blades as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Shrug (Machine).png",
+            "assets/images/exercises/Shrug (Machine).png",
+            "assets/images/exercises/Shrug (Machine).png"
+          ]
+        },
+        {
+          "name": "Chin Up",
+          "mainImageUrl": "assets/images/exercises/Chin Up.png",
+          "videoUrl": "assets/videos/chin_up.mp4",
+          "instructions": [
+            "Reach up and grab a pull-up bar with a double underhand grip (palms facing back). Your hands should be shoulder-width apart or slightly closer.",
+            "Retract your shoulders, engage your abs, squeeze your glutes, and cross your lower legs, lifting your feet off the floor.",
+            "Take a breath and pull yourself up in one fluid motion. Aim to have your chin over the bar at the top. Exhale.",
+            "Lower yourself slowly and breathe in. Don’t rest your feet on the floor."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Chin Up.png",
+            "assets/images/exercises/Chin Up.png",
+            "assets/images/exercises/Chin Up.png"
+          ]
+        },
+        {
+          "name": "Chin Up (Assisted)",
+          "mainImageUrl": "assets/images/exercises/Chin Up (Assisted).png",
+          "videoUrl": "assets/videos/chin_up_assisted.mp4",
+          "instructions": [
+            "Select the appropriate load on the machine.",
+            "Reach up and grab the bar with a double underhand grip (palms facing back). Have your hands shoulder-width apart.",
+            "Place your knees on top of the machine pad.",
+            "Bring your shoulders back, squeeze your glutes, and engage your abs.",
+            "Take a breath and pull yourself up in one fluid motion, exhaling at the top.",
+            "Lower yourself slowly, extending your arms fully. Breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Chin Up (Assisted).png",
+            "assets/images/exercises/Chin Up (Assisted).png",
+            "assets/images/exercises/Chin Up (Assisted).png"
+          ]
+        },
+        {
+          "name": "Iso-Lateral High Row (Machine)",
+          "mainImageUrl": "assets/images/exercises/Iso-Lateral High Row (Machine).png",
+          "videoUrl": "assets/videos/iso-lateral_high_row_machine.mp4",
+          "instructions": [
+            "Load the machine and set the thigh pad for your legs to fit snugly.",
+            "Sit down and grab the handles.",
+            "Bring your shoulders back, engage your abs, and take a breath.",
+            "Pull the handles to your torso, squeezing your back muscles, and breathe out.",
+            "Slowly extend your arms as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Iso-Lateral High Row (Machine).png",
+            "assets/images/exercises/Iso-Lateral High Row (Machine).png",
+            "assets/images/exercises/Iso-Lateral High Row (Machine).png"
+          ]
+        },
+        {
+          "name": "Lat Pulldown - Close Grip (Cable)",
+          "mainImageUrl": "assets/images/exercises/Lat Pulldown - Close Grip (Cable).png",
+          "videoUrl": "assets/videos/lat_pulldown_-_close_grip_cable.mp4",
+          "instructions": [
+            "Attach a V handle to a lat pulldown machine.",
+            "Select the appropriate load.",
+            "Adjust the thigh pad for your legs to fit snugly underneath.",
+            "Grab the V handle with a neutral grip (palms facing one another), sit down, and position your thighs underneath the pad.",
+            "Bring your shoulders back and lean your torso slightly back.",
+            "Inhale and pull the V handle to your chest, squeezing your back muscles and exhaling.",
+            "Slowly extend your arms as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Lat Pulldown - Close Grip (Cable).png",
+            "assets/images/exercises/Lat Pulldown - Close Grip (Cable).png",
+            "assets/images/exercises/Lat Pulldown - Close Grip (Cable).png"
+          ]
+        },
+        {
+          "name": "Lat Pulldown (Cable)",
+          "mainImageUrl": "assets/images/exercises/Lat Pulldown (Cable).png",
+          "videoUrl": "assets/videos/lat_pulldown_cable.mp4",
+          "instructions": [
+            "Adjust the knee pad on the machine to be right against your thighs.",
+            "Select a weight you can lift for at least ten smooth reps.",
+            "Grab the bar with your hands slightly wider than shoulder-width apart. Your palms should face forward.",
+            "Sit down and secure your legs underneath the pad.",
+            "With your arms extended, bring your shoulders back and down.",
+            "Take a breath and pull the weight down through your elbows. As you pull, keep your elbows tucked and in line with your torso. Breathe out.",
+            "Hold for a moment and extend your arms fully as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Lat Pulldown (Cable).png",
+            "assets/images/exercises/Lat Pulldown (Cable).png",
+            "assets/images/exercises/Lat Pulldown (Cable).png"
+          ]
+        },
+        {
+          "name": "Lat Pulldown (Machine)",
+          "mainImageUrl": "assets/images/exercises/Lat Pulldown (Machine).png",
+          "videoUrl": "assets/videos/lat_pulldown_machine.mp4",
+          "instructions": [
+            "Select the appropriate load.",
+            "Adjust the thigh pad. Your legs should fit snugly.",
+            "Stand up and grab the handles with an even overhand grip (palms facing forward).",
+            "Keep your arms straight and sit down, securing your legs under the pad.",
+            "Bring your shoulders back and take a breath.",
+            "Pull the handles down, tucking your elbows and bringing them in line with your torso. Breathe out.",
+            "Extend your arms slowly and breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Lat Pulldown (Machine).png",
+            "assets/images/exercises/Lat Pulldown (Machine).png",
+            "assets/images/exercises/Lat Pulldown (Machine).png"
+          ]
+        },
+        {
+          "name": "Pullover (Machine)",
+          "mainImageUrl": "assets/images/exercises/Pullover (Machine).png",
+          "videoUrl": "assets/videos/pullover_machine.mp4",
+          "instructions": [
+            "Add the appropriate load to the machine and adjust the seat height.",
+            "Sit down and place your lower triceps and elbows on the pads, with your hands grasping the handles for additional support.",
+            "Breathe in, engage your abs, and pull the weight down until your elbows are at your sides. Exhale.",
+            "Raise your arms to the starting overhead position as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Pullover (Machine).png",
+            "assets/images/exercises/Pullover (Machine).png",
+            "assets/images/exercises/Pullover (Machine).png"
+          ]
+        },
+        {
+          "name": "Reverse Grip Lat Pulldown (Cable)",
+          "mainImageUrl": "assets/images/exercises/Reverse Grip Lat Pulldown (Cable).png",
+          "videoUrl": "assets/videos/reverse_grip_lat_pulldown_cable.mp4",
+          "instructions": [
+            "Select the appropriate weight.",
+            "Adjust the pad height so your legs fit snugly.",
+            "Stand tall and grab the bar with an even underhand grip (palms facing back).",
+            "Sit down and bring your shoulders back.",
+            "Take a breath and pull the bar to your chest. Exhale immediately.",
+            "Extend your arms as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Reverse Grip Lat Pulldown (Cable).png",
+            "assets/images/exercises/Reverse Grip Lat Pulldown (Cable).png",
+            "assets/images/exercises/Reverse Grip Lat Pulldown (Cable).png"
+          ]
+        },
+        {
+          "name": "Single Arm Lat Pulldown",
+          "mainImageUrl": "assets/images/exercises/Single Arm Lat Pulldown.png",
+          "videoUrl": "assets/videos/single_arm_lat_pulldown.mp4",
+          "instructions": [
+            "Adjust the knee pad to a height where your thighs fit snugly underneath.",
+            "Stand tall, reach up, and grab the handle with one hand.",
+            "Sit down and secure your thighs underneath the pad.",
+            "With your arm straight, retract your shoulder blades, engage your midsection, and inhale.",
+            "Pull the cable down and in until you feel a contraction on your back. Keep your elbow in line with your torso and close to your body.",
+            "Hold for a moment as you exhale.",
+            "Slowly extend your arm as you breathe in before the next rep."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Single Arm Lat Pulldown.png",
+            "assets/images/exercises/Single Arm Lat Pulldown.png",
+            "assets/images/exercises/Single Arm Lat Pulldown.png"
+          ]
+        },
+        {
+          "name": "Vertical Traction (Machine)",
+          "mainImageUrl": "assets/images/exercises/Vertical Traction (Machine).png",
+          "videoUrl": "assets/videos/vertical_traction_machine.mp4",
+          "instructions": [
+            "Select the appropriate load.",
+            "Face away from the machine with your backside close to the back pad with the handles overhead.",
+            "Grab the handles with a neutral (palms facing one another) or overhand (palms facing forward) grip and sit down.",
+            "Bring your chest out, engage your abs, and breathe in.",
+            "Pull the handles down and to your sides with your elbows traveling in a semi-arc toward your lats. Exhale.",
+            "Slowly extend your arms and breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Vertical Traction (Machine).png",
+            "assets/images/exercises/Vertical Traction (Machine).png",
+            "assets/images/exercises/Vertical Traction (Machine).png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lower back",
+      "exercises": [
+        {
+          "name": "Glute Kickback (Machine)",
+          "mainImageUrl": "assets/images/exercises/Glute Kickback (Machine).png",
+          "videoUrl": "assets/videos/glute_kickback_machine.mp4",
+          "instructions": [
+            "Select the appropriate load.",
+            "Position your right side to the machine and grab the horizontal support bar.",
+            "Place the back of your right thigh against the pad, just above the crease of the knee.",
+            "Bring your shoulders back, engage your abs, and extend your leg back in one fluid motion as you exhale.",
+            "Slowly bring your leg to the starting position as you breathe in.",
+            "Once finished, rotate your body 180 degrees, and do the same number of reps for your left leg."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Glute Kickback (Machine).png",
+            "assets/images/exercises/Glute Kickback (Machine).png",
+            "assets/images/exercises/Glute Kickback (Machine).png"
+          ]
+        },
+        {
+          "name": "Standing Cable Glute Kickbacks",
+          "mainImageUrl": "assets/images/exercises/Standing Cable Glute Kickbacks.png",
+          "videoUrl": "assets/videos/standing_cable_glute_kickbacks.mp4",
+          "instructions": [
+            "Set the pulley to the lowest position and select the appropriate weight.",
+            "Attach an ankle strap to the pulley.",
+            "Face the cable machine and wrap the strap around your right ankle, just above the foot.",
+            "Bend forward, grab the cable machine’s pillars for balance, and engage your abs.",
+            "Take a breath and bring your right leg back in one fluid motion, squeezing your glute at the top and exhaling.",
+            "Slowly bring the leg to the starting position and breathe in.",
+            "Once finished, wrap the strap over your other ankle, lean forward, and do the same number of reps."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Standing Cable Glute Kickbacks.png",
+            "assets/images/exercises/Standing Cable Glute Kickbacks.png",
+            "assets/images/exercises/Standing Cable Glute Kickbacks.png"
+          ]
+        },
+        {
+          "name": "Deadlift (Smith Machine)",
+          "mainImageUrl": "assets/images/exercises/Deadlift (Smith Machine).png",
+          "videoUrl": "assets/videos/deadlift_smith_machine.mp4",
+          "instructions": [
+            "Set the Smith machine bar in the lowest position and load it appropriately.",
+            "Stand in front of the bar with your shins a couple of inches away.",
+            "Lean forward and grab the bar with a double overhand grip.",
+            "Bend your knees slightly and bring your chest out to put your back in a neutral position.",
+            "Take a breath and pull the bar up, extending your hips near the top as you breathe out.",
+            "Hold the top briefly and lower the bar by bringing your buttocks back. Maintain a neutral back position.",
+            "Breathe in on the way down or before initiating the next rep."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Deadlift (Smith Machine).png",
+            "assets/images/exercises/Deadlift (Smith Machine).png",
+            "assets/images/exercises/Deadlift (Smith Machine).png"
+          ]
+        },
+        {
+          "name": "Back Extension (Hyperextension)",
+          "mainImageUrl": "assets/images/exercises/Back Extension (Hyperextension).png",
+          "videoUrl": "assets/videos/back_extension_hyperextension.mp4",
+          "instructions": [
+            "Set yourself up on a back extension machine. Have your hips and thighs against the pad and your ankles locked on the foot brace.",
+            "Engage your abs, cross your arms in front of your chest, and take a breath.",
+            "Lower yourself by bending at the hips and move down until you feel a stretch in your hamstrings and glutes.",
+            "Engage your buttocks and lower back to raise your torso to the top position, pausing for a moment and exhaling."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Back Extension (Hyperextension).png",
+            "assets/images/exercises/Back Extension (Hyperextension).png",
+            "assets/images/exercises/Back Extension (Hyperextension).png"
+          ]
+        },
+        {
+          "name": "Back Extension (Machine)",
+          "mainImageUrl": "assets/images/exercises/Back Extension (Machine).png",
+          "videoUrl": "assets/videos/back_extension_machine.mp4",
+          "instructions": [],
+          "galleryImages": [
+            "assets/images/exercises/Back Extension (Machine).png",
+            "assets/images/exercises/Back Extension (Machine).png",
+            "assets/images/exercises/Back Extension (Machine).png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Abs",
+      "exercises": [
+        {
+          "name": "Cable Crunch",
+          "mainImageUrl": "assets/images/exercises/Cable Crunch.png",
+          "videoUrl": "assets/videos/cable_crunch.mp4",
+          "instructions": [
+            "Grab a rope attachment with both hands and have your thumbs facing up.",
+            "Kneel, lean forward, and position the rope behind your head. Keep your hands close to your neck.",
+            "Once in position, engage your midsection.",
+            "Initiate the crunch by taking a breath and flexing your abs. Focus on crunching your torso instead of simply moving at the hips.",
+            "Hold for a moment as you exhale.",
+            "Slowly raise your torso to bring yourself to the starting position as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Cable Crunch.png",
+            "assets/images/exercises/Cable Crunch.png",
+            "assets/images/exercises/Cable Crunch.png"
+          ]
+        },
+        {
+          "name": "Cable Twist (Up to down)",
+          "mainImageUrl": "assets/images/exercises/Cable Twist (Up to down).png",
+          "videoUrl": "assets/videos/cable_twist_up_to_down.mp4",
+          "instructions": [
+            "Select the appropriate load on the cable machine.",
+            "Place the pulley in the highest position and attach a handle to it.",
+            "Grab the handle with both hands, keeping your wrists neutral (facing one another).",
+            "Take a step away from the cable machine and stand sideways.",
+            "With the handle at shoulder level and arms straight, engage your abs and breathe in.",
+            "Pull the cable diagonally across your body, twisting your torso and exhaling.",
+            "Rotate your body to the starting position as you breathe in.",
+            "Once finished, turn your body 180 degrees and do the same number of reps for the other side."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Cable Twist (Up to down).png",
+            "assets/images/exercises/Cable Twist (Up to down).png",
+            "assets/images/exercises/Cable Twist (Up to down).png"
+          ]
+        },
+        {
+          "name": "Cable Core Palloff Press",
+          "mainImageUrl": "assets/images/exercises/Cable Core Palloff Press.png",
+          "videoUrl": "assets/videos/cable_core_palloff_press.mp4",
+          "instructions": [
+            "Select the load on the cable machine.",
+            "Place the pulley at chest height and attach a handle.",
+            "Grab the handle with both hands and stand sideways.",
+            "Bring your shoulders back, squeeze your glutes, and engage your midsection.",
+            "Take a breath and press the handle forward, fully extending your arms and exhaling.",
+            "Pause for a moment and bring the handle to your body as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Cable Core Palloff Press.png",
+            "assets/images/exercises/Cable Core Palloff Press.png",
+            "assets/images/exercises/Cable Core Palloff Press.png"
+          ]
+        },
+        {
+          "name": "Crunch (Machine)",
+          "mainImageUrl": "assets/images/exercises/Crunch (Machine).png",
+          "videoUrl": "assets/videos/crunch_machine.mp4",
+          "instructions": [
+            "Select the appropriate load.",
+            "Sit down on the machine. Secure your ankles on the bottom pads, have the middle pad against your lower back, and position your chest on the top pad.",
+            "Grab the handles for support.",
+            "Take a breath and flex your abs to push the top pad forward. Exhale.",
+            "Release as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Crunch (Machine).png",
+            "assets/images/exercises/Crunch (Machine).png",
+            "assets/images/exercises/Crunch (Machine).png"
+          ]
+        },
+        {
+          "name": "Knee Raise Parallel Bars",
+          "mainImageUrl": "assets/images/exercises/Knee Raise Parallel Bars.png",
+          "videoUrl": "assets/videos/knee_raise_parallel_bars.mp4",
+          "instructions": [
+            "Position yourself inside a captain's chair with your feet on a platform or steps, back against the pad, and forearms flat on the pair of padded parallel bars.",
+            "Bring your shoulders back and contract your abs.",
+            "Step off the platform or steps and support yourself with your upper body musculature. Keep your shoulders in position and avoid slumping.",
+            "Take a breath and engage your abs to raise your knees as high as possible in one fluid motion. Breathe out at the top.",
+            "Lower your knees to the starting position, extending them on the way down, and stop before your lower back begins to arch. Breathe in on the way down."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Knee Raise Parallel Bars.png",
+            "assets/images/exercises/Knee Raise Parallel Bars.png",
+            "assets/images/exercises/Knee Raise Parallel Bars.png"
+          ]
+        },
+        {
+          "name": "Leg Raise Parallel Bars",
+          "mainImageUrl": "assets/images/exercises/Leg Raise Parallel Bars.png",
+          "videoUrl": "assets/videos/leg_raise_parallel_bars.mp4",
+          "instructions": [
+            "Position yourself on a captain's chair. Have your forearms flat against the horizontal pads and grab the handles for support.",
+            "Bring your feet together and engage your abs to position your lower back against the back support.",
+            "Take a breath and raise your legs in one fluid motion, going as high as possible. Exhale at the top.",
+            "Slowly lower your legs to the starting position and keep the tension on your abs. Breathe in on the way down, and don't let your lower back arch."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Leg Raise Parallel Bars.png",
+            "assets/images/exercises/Leg Raise Parallel Bars.png",
+            "assets/images/exercises/Leg Raise Parallel Bars.png"
+          ]
+        },
+        {
+          "name": "Torso Rotation",
+          "mainImageUrl": "assets/images/exercises/Torso Rotation.png",
+          "videoUrl": "assets/videos/torso_rotation.mp4",
+          "instructions": [
+            "Select the appropriate weight.",
+            "Adjust the seat height so that you can comfortably place your forearms on the pads at your sides and grab the handles.",
+            "With your knees bent, position your shins against the bottom pads and push forward to create whole-body rigidity.",
+            "Breathe in and twist your lower body to the right as you exhale. It should be a fluid motion.",
+            "Slowly return your lower body to the starting position as you breathe in.",
+            "Rotate your legs to the left and breathe out again.",
+            "Continue alternating from left to right, breathing steadily as you do reps."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Torso Rotation.png",
+            "assets/images/exercises/Torso Rotation.png",
+            "assets/images/exercises/Torso Rotation.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Legs",
+      "exercises": [
+        {
+          "name": "Hip Abduction (Machine)",
+          "mainImageUrl": "assets/images/exercises/Hip Abduction (Machine).png",
+          "videoUrl": "assets/videos/hip_abduction_machine.mp4",
+          "instructions": [
+            "Select the appropriate load and sit down.",
+            "Bring your shoulders back and grab the handles to your sides.",
+            "Step on the foot platforms and position the outer part of your lower thighs against the pads.",
+            "Take a breath and spread your legs out as much as possible in one fluid motion, breathing out.",
+            "Bring your knees together as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Hip Abduction (Machine).png",
+            "assets/images/exercises/Hip Abduction (Machine).png",
+            "assets/images/exercises/Hip Abduction (Machine).png"
+          ]
+        },
+        {
+          "name": "Hip Adduction (Machine)",
+          "mainImageUrl": "assets/images/exercises/Hip Adduction (Machine).png",
+          "videoUrl": "assets/videos/hip_adduction_machine.mp4",
+          "instructions": [
+            "Select the appropriate load.",
+            "Sit down and place your inner thighs against the machine pads. Position your feet on the foot platforms below.",
+            "Grab the handles to your sides, retract your shoulder blades, and take a breath.",
+            "Squeeze your inner thigh muscles to bring the pads together as you breathe out.",
+            "Move your legs to the starting position as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Hip Adduction (Machine).png",
+            "assets/images/exercises/Hip Adduction (Machine).png",
+            "assets/images/exercises/Hip Adduction (Machine).png"
+          ]
+        },
+        {
+          "name": "Calf Extension (Machine)",
+          "mainImageUrl": "assets/images/exercises/Calf Extension (Machine).png",
+          "videoUrl": "assets/videos/calf_extension_machine.mp4",
+          "instructions": [
+            "Select the appropriate load on the calf extension machine.",
+            "Sit down and grab the handles by your sides.",
+            "Place the balls of your feet on the footplate. Your legs should be straight.",
+            "Take a breath and flex your ankles to push the plate away as you exhale.",
+            "Hold for a moment and allow your ankles to bend as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Calf Extension (Machine).png",
+            "assets/images/exercises/Calf Extension (Machine).png",
+            "assets/images/exercises/Calf Extension (Machine).png"
+          ]
+        },
+        {
+          "name": "Calf Press (Machine)",
+          "mainImageUrl": "assets/images/exercises/Calf Press (Machine).png",
+          "videoUrl": "assets/videos/calf_press_machine.mp4",
+          "instructions": [
+            "Load a leg press machine and sit down.",
+            "Raise your legs and place the balls of your feet at the edge of the footplate.",
+            "Bring your shoulders back and grab the handles by your sides.",
+            "Extend your knees to unrack the weight.",
+            "Flex your ankles to press the platform away from yourself and hold for a moment as you breathe out.",
+            "Allow your ankles to bend and stretch your calves as you breathe in.",
+            "Once finished, turn the handles you’re holding to secure the weight."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Calf Press (Machine).png",
+            "assets/images/exercises/Calf Press (Machine).png",
+            "assets/images/exercises/Calf Press (Machine).png"
+          ]
+        },
+        {
+          "name": "Seated Calf Raise",
+          "mainImageUrl": "assets/images/exercises/Seated Calf Raise.png",
+          "videoUrl": "assets/videos/seated_calf_raise.mp4",
+          "instructions": [
+            "Load the machine, sit down, and adjust the pad. Your thighs should fit snugly, allowing you to unrack the weight by extending your ankles.",
+            "Position your thighs against the pad and grab the handles firmly.",
+            "Take a breath and unrack the weight by flexing your calves.",
+            "Put the safety bar to the side and flex your ankles to lower the weight until you feel a stretch in your calves.",
+            "Press through the balls of your feet and flex your calves, exhaling near the top."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Seated Calf Raise.png",
+            "assets/images/exercises/Seated Calf Raise.png",
+            "assets/images/exercises/Seated Calf Raise.png"
+          ]
+        },
+        {
+          "name": "Standing Calf Raise (Machine)",
+          "mainImageUrl": "assets/images/exercises/Standing Calf Raise (Machine).png",
+          "videoUrl": "assets/videos/standing_calf_raise_machine.mp4",
+          "instructions": [
+            "Select the appropriate load.",
+            "Put your shoulders and upper back against the machine’s pad.",
+            "Position the balls of your feet on the platform and extend your knees.",
+            "Grab the handles by the machine’s pad for extra support.",
+            "Take a breath and extend your ankles, squeezing your calves at the top, and exhale.",
+            "Lower yourself slowly, feeling your calves stretch at the bottom. Breathe in on the way down."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Standing Calf Raise (Machine).png",
+            "assets/images/exercises/Standing Calf Raise (Machine).png",
+            "assets/images/exercises/Standing Calf Raise (Machine).png"
+          ]
+        },
+        {
+          "name": "Standing Calf Raise (Smith)",
+          "mainImageUrl": "assets/images/exercises/Standing Calf Raise (Smith).png",
+          "videoUrl": "assets/videos/standing_calf_raise_smith.mp4",
+          "instructions": [
+            "Set the bar at the appropriate height, where you can unrack it as you fully extend your knees.",
+            "Add the appropriate weight and position a calf raise block under the bar.",
+            "Position your trapezius against the bar, grab it with both hands, and place the balls of your feet on the platform.",
+            "Engage your entire body and straighten your knees to unrack the bar.",
+            "Inhale and slowly lower yourself by allowing your ankles to flex. Keep your knees extended.",
+            "Pause briefly at the bottom and push through the balls of your feet to extend your ankles. Squeeze your calves and pause briefly as you exhale."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Standing Calf Raise (Smith).png",
+            "assets/images/exercises/Standing Calf Raise (Smith).png",
+            "assets/images/exercises/Standing Calf Raise (Smith).png"
+          ]
+        },
+        {
+          "name": "Lying Leg Curl (Machine)",
+          "mainImageUrl": "assets/images/exercises/Lying Leg Curl (Machine).png",
+          "videoUrl": "assets/videos/lying_leg_curl_machine.mp4",
+          "instructions": [
+            "Select the appropriate load and adjust the pad to be over your Achilles tendon (above the heel) when you lie down.",
+            "Lie down, grab the handles, and place the back of your lower legs against the pad.",
+            "Take a breath and engage your hamstrings to curl your legs, lifting the weight.",
+            "Curl until your lower legs are almost vertical and exhale at the top.",
+            "Hold for a moment and extend your knees slowly as you inhale."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Lying Leg Curl (Machine).png",
+            "assets/images/exercises/Lying Leg Curl (Machine).png",
+            "assets/images/exercises/Lying Leg Curl (Machine).png"
+          ]
+        },
+        {
+          "name": "Seated Leg Curl (Machine)",
+          "mainImageUrl": "assets/images/exercises/Seated Leg Curl (Machine).png",
+          "videoUrl": "assets/videos/seated_leg_curl_machine.mp4",
+          "instructions": [
+            "Select the appropriate load.",
+            "Adjust the pad position. It should be against your Achilles' heels as you sit down.",
+            "Sit down, position the back of your lower legs against the pad, and grab the handles at your sides.",
+            "Bring your shoulders back, engage your abs, and inhale.",
+            "Bend your knees by contracting your hamstrings and breathe out.",
+            "Hold for a moment and slowly extend your knees as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Seated Leg Curl (Machine).png",
+            "assets/images/exercises/Seated Leg Curl (Machine).png",
+            "assets/images/exercises/Seated Leg Curl (Machine).png"
+          ]
+        },
+        {
+          "name": "Standing Leg Curls",
+          "mainImageUrl": "assets/images/exercises/Standing Leg Curls.png",
+          "videoUrl": "assets/videos/standing_leg_curls.mp4",
+          "instructions": [
+            "Select the appropriate weight on the machine.",
+            "Stand tall, grab the handles for support, and position your right Achilles heel against the machine’s pad.",
+            "Bring your shoulders back, engage your abs, and take a breath.",
+            "Slowly bend your leg until your ankle is slightly higher than your knee.",
+            "Squeeze your hamstring muscle at the top and exhale.",
+            "Slowly extend your leg as you breathe in.",
+            "Once finished training one side, position your opposite Achilles heel against the pad and do the same number of reps."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Standing Leg Curls.png",
+            "assets/images/exercises/Standing Leg Curls.png",
+            "assets/images/exercises/Standing Leg Curls.png"
+          ]
+        },
+        {
+          "name": "Belt Squat (Machine)",
+          "mainImageUrl": "assets/images/exercises/Belt Squat (Machine).png",
+          "videoUrl": "assets/videos/belt_squat_machine.mp4",
+          "instructions": [
+            "Load the machine appropriately and put on the weight belt.",
+            "Step on the platform and hook the belt’s chain to the machine’s lever via a carabiner.",
+            "Stand tall and grab the handles or horizontal bar in front.",
+            "Position your feet at a comfortable width for squats with your toes pointing slightly out.",
+            "Bring your chest out, engage your abs, and unrack the weight. You can hold onto the bar or handles in front of you for balance.",
+            "Breathe in and descend until your thighs are roughly parallel to the bar.",
+            "Pause briefly and push through your heels to extend your knees, exhaling at the top."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Belt Squat (Machine).png",
+            "assets/images/exercises/Belt Squat (Machine).png",
+            "assets/images/exercises/Belt Squat (Machine).png"
+          ]
+        },
+        {
+          "name": "Hack Squat (Machine)",
+          "mainImageUrl": "assets/images/exercises/Hack Squat (Machine).png",
+          "videoUrl": "assets/videos/hack_squat_machine.mp4",
+          "instructions": [
+            "Position yourself inside the machine with your shoulders against the pad.",
+            "Have your feet in a comfortable squatting stance on the platform below.",
+            "Bring your shoulders back and engage your abs.",
+            "Extend your knees to unrack the weight and remove the safety latch.",
+            "Inhale and descend by bending your knees.",
+            "Move down until your knees form a 90-degree angle.",
+            "Press through your heels and straighten your legs, exhaling near the top."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Hack Squat (Machine).png",
+            "assets/images/exercises/Hack Squat (Machine).png",
+            "assets/images/exercises/Hack Squat (Machine).png"
+          ]
+        },
+        {
+          "name": "Leg Extension (Machine)",
+          "mainImageUrl": "assets/images/exercises/Leg Extension (Machine).png",
+          "videoUrl": "assets/videos/leg_extension_machine.mp4",
+          "instructions": [
+            "Adjust the pad to be against your lower legs, just above your feet when seated.",
+            "Sit down, grab the handles by your sides, place your lower shins against the pad, and retract your shoulders.",
+            "Take a breath and straighten your legs by engaging your quadriceps.",
+            "Lift the weight until your knees straighten, and breathe out.",
+            "Hold for a moment and bend your knees slowly as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Leg Extension (Machine).png",
+            "assets/images/exercises/Leg Extension (Machine).png",
+            "assets/images/exercises/Leg Extension (Machine).png"
+          ]
+        },
+        {
+          "name": "Leg Press (Machine)",
+          "mainImageUrl": "assets/images/exercises/Leg Press (Machine).png",
+          "videoUrl": "assets/videos/leg_press_machine.mp4",
+          "instructions": [
+            "Lift your legs and plant your feet flat on the platform. Have your feet in a comfortable position with your toes pointing slightly out.",
+            "Grab the handles to your sides, bring your shoulders back, and engage your abs.",
+            "Press the platform and straighten your legs while rotating the handles to remove the safety pins.",
+            "Take another breath and lower the platform by bending your knees.",
+            "Hold the bottom position for a moment and press the platform away as you exhale.",
+            "Once finished, straighten your legs, rotate the handles to put the safety pins on, and rest."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Leg Press (Machine).png",
+            "assets/images/exercises/Leg Press (Machine).png",
+            "assets/images/exercises/Leg Press (Machine).png"
+          ]
+        },
+        {
+          "name": "Leg Press Horizontal (Machine)",
+          "mainImageUrl": "assets/images/exercises/Leg Press Horizontal (Machine).png",
+          "videoUrl": "assets/videos/leg_press_horizontal_machine.mp4",
+          "instructions": [
+            "Select the appropriate load and sit down.",
+            "Place your feet flat on the platform at a comfortable width.",
+            "Bring your shoulders back, engage your abs, and grab the handles by your sides.",
+            "Take a breath and press the platform forward until you straighten your legs. Exhale.",
+            "Bend your legs slowly as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Leg Press Horizontal (Machine).png",
+            "assets/images/exercises/Leg Press Horizontal (Machine).png",
+            "assets/images/exercises/Leg Press Horizontal (Machine).png"
+          ]
+        },
+        {
+          "name": "Squat (Smith Machine)",
+          "mainImageUrl": "assets/images/exercises/Squat (Smith Machine).png",
+          "videoUrl": "assets/videos/squat_smith_machine.mp4",
+          "instructions": [
+            "Grab the bar with an overhand grip, tuck your head underneath, and position your upper back against the bar.",
+            "Walk your feet out a bit and have them hip-width apart.",
+            "Extend your knees to unrack the bar.",
+            "Engage your abs, breathe in, and squat by bending your knees.",
+            "Descend until your thighs are parallel to the floor.",
+            "Press through your heels to move back to the top and exhale."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Squat (Smith Machine).png",
+            "assets/images/exercises/Squat (Smith Machine).png",
+            "assets/images/exercises/Squat (Smith Machine).png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Arms",
+      "exercises": [
+        {
+          "name": "Behind the Back Curl (Cable)",
+          "mainImageUrl": "assets/images/exercises/Behind the Back Curl (Cable).png",
+          "videoUrl": "assets/videos/behind_the_back_curl_cable.mp4",
+          "instructions": [
+            "Set the pulleys at around mid-thigh height, attach handles, and select the load.",
+            "Grab the handles one by one and stand so the pulleys are behind you.",
+            "Take a couple of steps forward to lift the weights off their stacks and allow the weight to pull your elbows behind your torso.",
+            "With your chest out, lean your torso slightly forward and stagger your stance (one foot forward, the other one back).",
+            "Breathe in, engage your abs, and curl until your wrists are at elbow level. Squeeze your biceps and exhale.",
+            "Slowly extend your arms, allowing the handles to travel behind your body, and breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Behind the Back Curl (Cable).png",
+            "assets/images/exercises/Behind the Back Curl (Cable).png",
+            "assets/images/exercises/Behind the Back Curl (Cable).png"
+          ]
+        },
+        {
+          "name": "Bicep Curl (Machine)",
+          "mainImageUrl": "assets/images/exercises/Bicep Curl (Machine).png",
+          "videoUrl": "assets/videos/bicep_curl_machine.mp4",
+          "instructions": [
+            "Select the correct load on the machine and adjust your seat’s height.",
+            "Sit down and grab the handles by your sides.",
+            "Bring your shoulders back, engage your abs, and take a breath.",
+            "Bend one arm to lift the handle. Curl until your hand is slightly higher than your elbow, and breathe out.",
+            "Extend your arm slowly as you breathe in.",
+            "Bend your opposite arm in the same way.",
+            "Keep alternating until you finish the set."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Bicep Curl (Machine).png",
+            "assets/images/exercises/Bicep Curl (Machine).png",
+            "assets/images/exercises/Bicep Curl (Machine).png"
+          ]
+        },
+        {
+          "name": "Overhead Curl (Cable)",
+          "mainImageUrl": "assets/images/exercises/Overhead Curl (Cable).png",
+          "videoUrl": "assets/videos/overhead_curl_cable.mp4",
+          "instructions": [
+            "Set the pulleys of a double cable machine in the highest position.",
+            "Select the appropriate weight on both stacks and attach handles to the pulleys.",
+            "Grab the two handles and stand in the middle of the cable machine with your arms straight and to your sides.",
+            "Bring your shoulders back and engage your abs.",
+            "Simultaneously bend your arms, bringing the handles to the sides of your head as you breathe out.",
+            "Slowly extend your arms as you inhale."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Overhead Curl (Cable).png",
+            "assets/images/exercises/Overhead Curl (Cable).png",
+            "assets/images/exercises/Overhead Curl (Cable).png"
+          ]
+        },
+        {
+          "name": "Preacher Curl (Machine)",
+          "mainImageUrl": "assets/images/exercises/Preacher Curl (Machine).png",
+          "videoUrl": "assets/videos/preacher_curl_machine.mp4",
+          "instructions": [
+            "Select the appropriate load.",
+            "Adjust the seat’s height. You should be able to put your triceps against the pad while seated.",
+            "Sit down, extend your arms, and grab the handles.",
+            "Engage your abs and take a breath.",
+            "Bend your arms to lift the weight until your forearms are almost upright. Exhale at the top.",
+            "Slowly extend your arms as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Preacher Curl (Machine).png",
+            "assets/images/exercises/Preacher Curl (Machine).png",
+            "assets/images/exercises/Preacher Curl (Machine).png"
+          ]
+        },
+        {
+          "name": "Rope Cable Curl",
+          "mainImageUrl": "assets/images/exercises/Rope Cable Curl.png",
+          "videoUrl": "assets/videos/rope_cable_curl.mp4",
+          "instructions": [
+            "Set the pulley in the lowest position and attach a rope.",
+            "Select the appropriate weight on the cable machine.",
+            "Bend forward and grab both ends of the rope with a neutral grip (palms facing one another).",
+            "Stand tall, bring your shoulders back, and step back to lift the weight from its stack.",
+            "Take a breath and curl the cable by bending your elbows.",
+            "Lift until your wrists are slightly higher than your elbows, and breathe out.",
+            "Extend your arms slowly and breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Rope Cable Curl.png",
+            "assets/images/exercises/Rope Cable Curl.png",
+            "assets/images/exercises/Rope Cable Curl.png"
+          ]
+        },
+        {
+          "name": "Single Arm Curl (Cable)",
+          "mainImageUrl": "assets/images/exercises/Single Arm Curl (Cable).png",
+          "videoUrl": "assets/videos/single_arm_curl_cable.mp4",
+          "instructions": [
+            "Select the appropriate weight, set the pulley to the lowest position, and attach a handle.",
+            "Grab the handle with your right hand and position the palm up.",
+            "Take a step back, inhale, and squeeze your abs.",
+            "Curl the weight and squeeze your bicep at the top momentarily as you exhale.",
+            "Slowly extend your arm as you breathe in.",
+            "Once finished, grab the handle with your left hand and repeat."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Single Arm Curl (Cable).png",
+            "assets/images/exercises/Single Arm Curl (Cable).png",
+            "assets/images/exercises/Single Arm Curl (Cable).png"
+          ]
+        },
+        {
+          "name": "Overhead Triceps Extension (Cable)",
+          "mainImageUrl": "assets/images/exercises/Overhead Triceps Extension (Cable).png",
+          "videoUrl": "assets/videos/overhead_triceps_extension_cable.mp4",
+          "instructions": [
+            "Set the pulley at mid-thigh height, attach a rope, and select the correct load.",
+            "Grab both ends of the rope with an overhand grip (palms facing your body).",
+            "In one motion, turn away from the machine and dip slightly to raise the rope over your shoulders, positioning it behind your head. Your elbows should be bent and to the sides of your head.",
+            "With your chest out, lean forward slightly, bring one foot forward for balance, and brace your abs.",
+            "Breathe in and extend your elbows, spreading the rope at the top. Exhale.",
+            "Slowly bend your elbows as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Overhead Triceps Extension (Cable).png",
+            "assets/images/exercises/Overhead Triceps Extension (Cable).png",
+            "assets/images/exercises/Overhead Triceps Extension (Cable).png"
+          ]
+        },
+        {
+          "name": "Seated Dip Machine",
+          "mainImageUrl": "assets/images/exercises/Seated Dip Machine.png",
+          "videoUrl": "assets/videos/seated_dip_machine.mp4",
+          "instructions": [
+            "Select the appropriate load.",
+            "Sit down and grab the handles to your sides.",
+            "Plant your feet on the floor, bring your shoulders back, and engage your abs.",
+            "Take a breath and press the handles down, fully extending your arms and exhaling.",
+            "Bend your arms as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Seated Dip Machine.png",
+            "assets/images/exercises/Seated Dip Machine.png",
+            "assets/images/exercises/Seated Dip Machine.png"
+          ]
+        },
+        {
+          "name": "Seated Triceps Press",
+          "mainImageUrl": "assets/images/exercises/Seated Triceps Press.png",
+          "videoUrl": "assets/videos/seated_triceps_press.mp4",
+          "instructions": [
+            "Set the appropriate weight and sit down.",
+            "Grab the handles at your sides with a comfortable grip.",
+            "Bring your shoulders back, take a breath, and squeeze your abs.",
+            "Push the handles down until your elbows lock out and breathe out.",
+            "Slowly bend your arms as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Seated Triceps Press.png",
+            "assets/images/exercises/Seated Triceps Press.png",
+            "assets/images/exercises/Seated Triceps Press.png"
+          ]
+        },
+        {
+          "name": "Single Arm Triceps Pushdown (Cable)",
+          "mainImageUrl": "assets/images/exercises/Single Arm Triceps Pushdown (Cable).png",
+          "videoUrl": "assets/videos/single_arm_triceps_pushdown_cable.mp4",
+          "instructions": [
+            "Select the appropriate load, set the pulley to the highest position, and attach a rope.",
+            "Grab the rope with your right hand, position your elbow to your side, and step back.",
+            "Grab the cable machine's pillar with your left hand, take a deep breath, and engage your abs.",
+            "Slowly extend your arm and flex your triceps as you exhale.",
+            "Bend your arm as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Single Arm Triceps Pushdown (Cable).png",
+            "assets/images/exercises/Single Arm Triceps Pushdown (Cable).png",
+            "assets/images/exercises/Single Arm Triceps Pushdown (Cable).png"
+          ]
+        },
+        {
+          "name": "Triceps Dip (Assisted)",
+          "mainImageUrl": "assets/images/exercises/Triceps Dip (Assisted).png",
+          "videoUrl": "assets/videos/triceps_dip_assisted.mp4",
+          "instructions": [
+            "Select the appropriate load on the machine.",
+            "Grab the parallel bars, place your knees on the platform, and bring your legs together.",
+            "Retract your shoulder blades, straighten your arms, and engage your abs.",
+            "Take a breath and lower yourself by bending your arms.",
+            "Descend until your elbows are at a 90-degree angle, hold for a moment, and press back to the top as you breathe out."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Triceps Dip (Assisted).png",
+            "assets/images/exercises/Triceps Dip (Assisted).png",
+            "assets/images/exercises/Triceps Dip (Assisted).png"
+          ]
+        },
+        {
+          "name": "Triceps Dip (Weighted)",
+          "mainImageUrl": "assets/images/exercises/Triceps Dip (Weighted).png",
+          "videoUrl": "assets/videos/triceps_dip_weighted.mp4",
+          "instructions": [
+            "Attach a weight plate to yourself via a special belt.",
+            "Grab a pair of parallel bars and suspend yourself in the air.",
+            "Maintain an upright body, bring your shoulders back, and engage your abs.",
+            "Take a breath and lower yourself by bending your elbows.",
+            "Move down until your elbows are at a 90-degree angle.",
+            "Hold the position for a moment and press yourself back to the top as you exhale."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Triceps Dip (Weighted).png",
+            "assets/images/exercises/Triceps Dip (Weighted).png",
+            "assets/images/exercises/Triceps Dip (Weighted).png"
+          ]
+        },
+        {
+          "name": "Triceps Extension (Cable)",
+          "mainImageUrl": "assets/images/exercises/Triceps Extension (Cable).png",
+          "videoUrl": "assets/videos/triceps_extension_cable.mp4",
+          "instructions": [
+            "set a cable pulley in a low position and attach a handle.",
+            "Select a light load with a pin.",
+            "Reach down and grab the handle with one hand.",
+            "Turn your body away from the cable machine and extend your arm toward the ceiling.",
+            "Place your opposite hand on your elbow for support, retract your shoulder blades, and engage your abs.",
+            "Take a breath and slowly bend your elbow until you feel a stretch in your tricep.",
+            "Flex your tricep to extend your arm and exhale near the top."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Triceps Extension (Cable).png",
+            "assets/images/exercises/Triceps Extension (Cable).png",
+            "assets/images/exercises/Triceps Extension (Cable).png"
+          ]
+        },
+        {
+          "name": "Triceps Pressdown",
+          "mainImageUrl": "assets/images/exercises/Triceps Pressdown.png",
+          "videoUrl": "assets/videos/triceps_pressdown.mp4",
+          "instructions": [
+            "Set the appropriate weight on a cable machine.",
+            "Put the pulley in the highest position and attach a straight or V-shaped bar.",
+            "Grab the bar with an even overhand grip (palms facing down).",
+            "Bring your elbows to your sides, take a step back, and retract your shoulder blades.",
+            "Engage your abs and take a breath.",
+            "Extend your arms fully and hold the bottom position for a moment as you breathe out.",
+            "Slowly bend your arms until your wrists are slightly higher than your elbows, breathing in along the way."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Triceps Pressdown.png",
+            "assets/images/exercises/Triceps Pressdown.png",
+            "assets/images/exercises/Triceps Pressdown.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shoulders",
+      "exercises": [
+        {
+          "name": "Face Pull",
+          "mainImageUrl": "assets/images/exercises/Face Pull.png",
+          "videoUrl": "assets/videos/face_pull.mp4",
+          "instructions": [
+            "Select a light load, set the pulley to a high position, and attach a rope.",
+            "Grab the rope with your thumbs facing the ceiling.",
+            "Take a step back to lift the weight off its stack, bring your shoulders back, and stagger your stance for extra support.",
+            "Take a breath and pull the rope to your face, splitting it by bringing your arms to your sides. Breathe out.",
+            "Extend your arms as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Face Pull.png",
+            "assets/images/exercises/Face Pull.png",
+            "assets/images/exercises/Face Pull.png"
+          ]
+        },
+        {
+          "name": "Front Raise (Cable)",
+          "mainImageUrl": "assets/images/exercises/Front Raise (Cable).png",
+          "videoUrl": "assets/videos/cable_front_raise.mp4",
+          "instructions": [
+            "Set the pulley in the lowest position and attach a straight bar.",
+            "Face away from the cable machine with the bar between your legs.",
+            "Grab the straight bar with an overhand grip (palms facing back), and have the rope between your legs. Your arms should be straight.",
+            "Bring your shoulders back, engage your upper body, and bend your knees slightly.",
+            "Inhale and raise the bar away from your body in one fluid motion.",
+            "Lift until the bar is at shoulder level and breathe out. Keep your arms straight.",
+            "Lower your arms to the starting position as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Front Raise (Cable).png",
+            "assets/images/exercises/Front Raise (Cable).png",
+            "assets/images/exercises/Front Raise (Cable).png"
+          ]
+        },
+        {
+          "name": "Lateral Raise (Cable)",
+          "mainImageUrl": "assets/images/exercises/Lateral Raise (Cable).png",
+          "videoUrl": "assets/videos/cable_lateral_raise.mp4",
+          "instructions": [
+            "Set the pulleys of a double cable machine in the lowest position and attach handles.",
+            "Select the appropriate weight on both stacks.",
+            "Walk to the left and grab the handle with your right hand.",
+            "Walk to the right and grab the other handle with your left hand.",
+            "Stand in the middle with your arms straight and your hands in front of your hips.",
+            "Engage your abs, retract your shoulder blades, and breathe in.",
+            "Raise both arms to your sides in one fluid motion, going up until your shoulders, elbows, and wrists align. Exhale at the top.",
+            "Lower your arms as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Lateral Raise (Cable).png",
+            "assets/images/exercises/Lateral Raise (Cable).png",
+            "assets/images/exercises/Lateral Raise (Cable).png"
+          ]
+        },
+        {
+          "name": "Lateral Raise (Machine)",
+          "mainImageUrl": "assets/images/exercises/Lateral Raise (Machine).png",
+          "videoUrl": "assets/videos/machine_lateral_raise.mp4",
+          "instructions": [
+            "Select the appropriate load and adjust the seat’s height.",
+            "Sit down and bring your shoulders back and into the back support.",
+            "Grab the handles on your sides and position your forearms flat against the pads.",
+            "Take a breath and bring your arms to your sides smoothly, going up until your elbows are at shoulder level. Breathe out.",
+            "Lower your arms to your sides and breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Lateral Raise (Machine).png",
+            "assets/images/exercises/Lateral Raise (Machine).png",
+            "assets/images/exercises/Lateral Raise (Machine).png"
+          ]
+        },
+        {
+          "name": "Overhead Press (Smith Machine)",
+          "mainImageUrl": "assets/images/exercises/Overhead Press (Smith Machine).png",
+          "videoUrl": "assets/videos/overhead_press_smith_machine.mp4",
+          "instructions": [
+            "Position the Smith machine bar at collarbone height and add weight plates.",
+            "Stand in front of the bar and grab it with an even overhand grip. Your hands should be shoulder-width apart.",
+            "Bring your shoulders back, engage your abs, and take a breath.",
+            "Unrack the bar.",
+            "Take another breath and press the bar overhead, exhaling at the top.",
+            "Slowly lower the bar, breathing in on the way down."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Overhead Press (Smith Machine).png",
+            "assets/images/exercises/Overhead Press (Smith Machine).png",
+            "assets/images/exercises/Overhead Press (Smith Machine).png"
+          ]
+        },
+        {
+          "name": "Rear Delt Reverse Fly (Cable)",
+          "mainImageUrl": "assets/images/exercises/Rear Delt Reverse Fly (Cable).png",
+          "videoUrl": "assets/videos/rear_delt_reverse_fly_cable.mp4",
+          "instructions": [
+            "Set the pulleys of a double cable machine in the highest position and attach handles.",
+            "Select the appropriate weight and stand in the middle of the machine.",
+            "With your left shoulder facing the pulley, grab the handle with your right hand.",
+            "Walk to the pulley on your right and grab the handle with your left hand.",
+            "Stand in the middle of the machine, engage your abs, and extend your arms in front of your body.",
+            "Take a breath and spread your arms, squeezing your upper back muscles. Exhale.",
+            "Slowly bring your arms to the starting position as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Rear Delt Reverse Fly (Cable).png",
+            "assets/images/exercises/Rear Delt Reverse Fly (Cable).png",
+            "assets/images/exercises/Rear Delt Reverse Fly (Cable).png"
+          ]
+        },
+        {
+          "name": "Rear Delt Reverse Fly (Machine)",
+          "mainImageUrl": "assets/images/exercises/Rear Delt Reverse Fly (Machine).png",
+          "videoUrl": "assets/videos/rear_delt_reverse_fly_machine.mp4",
+          "instructions": [
+            "Select the appropriate load.",
+            "Adjust the seat height. The handles should be at shoulder level when you're seated.",
+            "Sit down and grab the handles with your palms facing down.",
+            "Bring your shoulders back and take a breath.",
+            "Extend your arms to your sides and back as you breathe out.",
+            "Bring your arms to the starting position as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Rear Delt Reverse Fly (Machine).png",
+            "assets/images/exercises/Rear Delt Reverse Fly (Machine).png",
+            "assets/images/exercises/Rear Delt Reverse Fly (Machine).png"
+          ]
+        },
+        {
+          "name": "Reverse Fly Single Arm (Cable)",
+          "mainImageUrl": "assets/images/exercises/Reverse Fly Single Arm (Cable).png",
+          "videoUrl": "assets/videos/reverse_fly_single_arm_cable.mp4",
+          "instructions": [
+            "Position a pulley at shoulder height and attach a handle.",
+            "Select the appropriate load, grab the handle with your right hand, and take a diagonal step to the right and back to lift the weight from its stack.",
+            "Bring your shoulders back, engage your abs, and breathe in.",
+            "Extend your arm to your right side and back, squeezing your shoulder muscle and breathing out.",
+            "Slowly bring your arm in front of your body as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Reverse Fly Single Arm (Cable).png",
+            "assets/images/exercises/Reverse Fly Single Arm (Cable).png",
+            "assets/images/exercises/Reverse Fly Single Arm (Cable).png"
+          ]
+        },
+        {
+          "name": "Seated Shoulder Press (Machine)",
+          "mainImageUrl": "assets/images/exercises/Seated Shoulder Press (Machine).png",
+          "videoUrl": "assets/videos/seated_shoulder_press_machine.mp4",
+          "instructions": [
+            "Sit down and bring your shoulder blades into the back support.",
+            "Plant your feet flat on the floor.",
+            "Grab the handles to your sides and keep your palms facing forward.",
+            "Take a breath and engage your abs.",
+            "Press the weight straight up until your arms are fully extended. Breathe out at the top.",
+            "Lower the weight to the starting position and breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Seated Shoulder Press (Machine).png",
+            "assets/images/exercises/Seated Shoulder Press (Machine).png",
+            "assets/images/exercises/Seated Shoulder Press (Machine).png"
+          ]
+        },
+        {
+          "name": "Shoulder Press (Machine Plates)",
+          "mainImageUrl": "assets/images/exercises/Shoulder Press (Machine Plates).png",
+          "videoUrl": "assets/videos/shoulder_press_machine_plates.mp4",
+          "instructions": [
+            "Add the appropriate amount of weight to the machine, ensuring it’s equal on both sides.",
+            "Adjust the seat height. Your elbows should be slightly lower than your shoulders as you grab the handles when you sit down.",
+            "Sit down and grab the handles.",
+            "Lean back and retract your shoulder blades.",
+            "Take a deep breath and engage your abs.",
+            "Press the weight up in one fluid motion and exhale at the top.",
+            "Slowly lower the weight as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Shoulder Press (Machine Plates).png",
+            "assets/images/exercises/Shoulder Press (Machine Plates).png",
+            "assets/images/exercises/Shoulder Press (Machine Plates).png"
+          ]
+        },
+        {
+          "name": "Single Arm Lateral Raise (Cable)",
+          "mainImageUrl": "assets/images/exercises/Single Arm Lateral Raise (Cable).png",
+          "videoUrl": "assets/videos/single_arm_lateral_raise_cable.mp4",
+          "instructions": [
+            "Select the appropriate load, set the pulley to the lowest position, and attach a handle.",
+            "Stand with your left side facing the cable attachment and grab the handle with your right hand",
+            "Take a lateral step away to lift the weight off its stack and maintain a slight bend in your right arm.",
+            "Breathe in, engage your abs, and lift your arm to the side until the wrist and elbow align with your shoulder. Exhale at the top.",
+            "Slowly lower your arm as you breathe in.",
+            "Once finished training one side, turn your body 180 degrees, grab the handle with your left hand, and repeat."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Single Arm Lateral Raise (Cable).png",
+            "assets/images/exercises/Single Arm Lateral Raise (Cable).png",
+            "assets/images/exercises/Single Arm Lateral Raise (Cable).png"
+          ]
+        },
+        {
+          "name": "Upright Row (Cable)",
+          "mainImageUrl": "assets/images/exercises/Upright Row (Cable).png",
+          "videoUrl": "assets/videos/upright_row_cable.mp4",
+          "instructions": [
+            "Set the pulley to the lowest position and attach a straight bar.",
+            "Select the appropriate weight.",
+            "Lean forward and grab the bar with an overhand grip (palms facing down).",
+            "Stand up and step back to lift the weight off its stack.",
+            "Bring your shoulders back, engage your abs, and put one foot slightly forward for support.",
+            "Take a breath and row the bar to your upper chest in one fluid motion. Exhale at the top.",
+            "Slowly extend your arms as you breathe in."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Upright Row (Cable).png",
+            "assets/images/exercises/Upright Row (Cable).png",
+            "assets/images/exercises/Upright Row (Cable).png"
+          ]
         }
       ]
     },
@@ -62,6 +1507,39 @@
             "assets/images/exercises/treadmill.png",
             "assets/images/exercises/treadmill.png",
             "assets/images/exercises/treadmill.png"
+          ]
+        },
+        {
+          "name": "Spinning",
+          "mainImageUrl": "assets/images/exercises/Spinning.png",
+          "videoUrl": "assets/videos/spinning.mp4",
+          "instructions": [
+            "Adjust the seat height and get on top of the cardio machine.",
+            "Select the appropriate program and grab the handles.",
+            "Place your feet flat on the pedals, bring your shoulders back, and direct your gaze forward.",
+            "Cycle steadily and maintain a steady breath."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Spinning.png",
+            "assets/images/exercises/Spinning.png",
+            "assets/images/exercises/Spinning.png"
+          ]
+        },
+        {
+          "name": "Walking on Stepmill",
+          "mainImageUrl": "assets/images/exercises/Walking on Stepmill.png",
+          "videoUrl": "assets/videos/walking_on_stepmill.mp4",
+          "instructions": [
+            "Climb on top of the machine and turn it on.",
+            "Select a low speed and grab the handrails for support.",
+            "Climb the moving stairs while keeping your shoulders back and abs engaged.",
+            "Maintain a steady breath.",
+            "Increase the speed to a sustainable pace once you're familiar with the machine."
+          ],
+          "galleryImages": [
+            "assets/images/exercises/Walking on Stepmill.png",
+            "assets/images/exercises/Walking on Stepmill.png",
+            "assets/images/exercises/Walking on Stepmill.png"
           ]
         }
       ]

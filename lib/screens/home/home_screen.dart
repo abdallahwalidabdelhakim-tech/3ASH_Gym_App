@@ -10,10 +10,10 @@ import '../../core/models/user_model.dart';
 import '../../core/services/user_service.dart';
 import '../../core/services/plan_service.dart';
 import '../analysis/analysis_screen.dart';
+import '../tools/tools_screen.dart';
 import '../profile/profile_screen.dart';
 import 'widgets/action_card.dart';
 import 'widgets/plan_exercise_card.dart';
-
 
 /// Main home screen widget with bottom navigation
 class HomeScreen extends StatefulWidget {
@@ -42,6 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
           ),
           const AnalysisScreen(),
+          const ToolsScreen(),
           const ProfileScreen(),
         ],
       ),
@@ -52,13 +53,13 @@ class _HomeScreenState extends State<HomeScreen> {
   /// Builds custom bottom navigation bar with Google Navigation Bar
   Widget _buildCustomBottomNav(BuildContext context, ThemeData theme) {
     final isDark = theme.brightness == Brightness.dark;
-    
+
     return DecoratedBox(
       decoration: BoxDecoration(
         color: isDark ? const Color(0xFF1A1A1A) : Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha:0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 10,
             offset: const Offset(0, -5),
           ),
@@ -69,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: isDark ? const Color(0xFF1A1A1A) : Colors.white,
           color: isDark ? Colors.white70 : Colors.black54,
           activeColor: const Color(0xFFD5FF5F),
-          tabBackgroundColor: const Color(0xFFD5FF5F).withValues(alpha:0.1),
+          tabBackgroundColor: const Color(0xFFD5FF5F).withValues(alpha: 0.1),
           gap: 8,
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
           selectedIndex: _currentIndex,
@@ -79,18 +80,10 @@ class _HomeScreenState extends State<HomeScreen> {
             });
           },
           tabs: const [
-            GButton(
-              icon: IconlyLight.home,
-              text: 'Home',
-            ),
-            GButton(
-              icon: IconlyLight.chart,
-              text: 'Analysis',
-            ),
-            GButton(
-              icon: IconlyLight.profile,
-              text: 'Profile',
-            ),
+            GButton(icon: IconlyLight.home, text: 'Home'),
+            GButton(icon: IconlyLight.chart, text: 'Analysis'),
+            GButton(icon: Icons.calculate, text: 'Tools'),
+            GButton(icon: IconlyLight.profile, text: 'Profile'),
           ],
         ),
       ),
@@ -100,7 +93,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
 // Separate widget for home content to avoid state issues
 class _HomeContent extends StatefulWidget {
-
   const _HomeContent({required this.onSeeStatsPressed});
   final VoidCallback onSeeStatsPressed;
 
@@ -118,7 +110,7 @@ class _HomeContentState extends State<_HomeContent> {
     super.initState();
     _userFuture = _loadUser();
     _refreshPlanStatus();
-    
+
     // Subscribe to plan updates
     _planSubscription = PlanService.planUpdates.listen((_) {
       if (mounted) {
@@ -145,7 +137,7 @@ class _HomeContentState extends State<_HomeContent> {
     try {
       final userService = context.read<UserService>();
       final result = await userService.getCurrentUser();
-      
+
       if (result['success'] == true) {
         final userJson = result['user'] as Map<String, dynamic>?;
         return userJson != null ? UserModel.fromJson(userJson) : null;
@@ -181,12 +173,12 @@ class _HomeContentState extends State<_HomeContent> {
                     future: _userFuture,
                     builder: (context, snapshot) {
                       final username = snapshot.data?.username;
-                      final displayName = snapshot.connectionState ==
-                              ConnectionState.waiting
+                      final displayName =
+                          snapshot.connectionState == ConnectionState.waiting
                           ? '...'
                           : (username != null && username.isNotEmpty)
-                              ? username
-                              : '';
+                          ? username
+                          : '';
                       return Text(
                         'HI $displayName 🔥',
                         style: theme.textTheme.titleLarge?.copyWith(
@@ -204,7 +196,7 @@ class _HomeContentState extends State<_HomeContent> {
               ),
             ],
           ),
-           const SizedBox(height: 24),
+          const SizedBox(height: 24),
           // Action Cards Slider
           SizedBox(
             height: 250,
@@ -223,7 +215,8 @@ class _HomeContentState extends State<_HomeContent> {
                   },
                   {
                     'image': 'assets/EXL.png',
-                    'title': localizations?.exerciseLibrary ?? 'Exercise Library',
+                    'title':
+                        localizations?.exerciseLibrary ?? 'Exercise Library',
                     'onTap': () {
                       context.push('/exercises');
                     },
@@ -236,11 +229,11 @@ class _HomeContentState extends State<_HomeContent> {
                     },
                   },
                 ];
-                
+
                 // Calculate width: screen width - padding (40) - margins (32) divided by 2
                 final screenWidth = MediaQuery.of(context).size.width;
                 final cardWidth = (screenWidth - 40 - 32) / 2;
-                
+
                 return Container(
                   width: cardWidth,
                   margin: const EdgeInsets.symmetric(horizontal: 8),
@@ -262,30 +255,41 @@ class _HomeContentState extends State<_HomeContent> {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(child: CircularProgressIndicator());
               }
-              
+
               final hasPlan = snapshot.data ?? false;
-              
+
               if (!hasPlan) {
                 // Show "no plan" message with two options
-                return _buildNoPlanSection(context, theme, isDark, localizations);
-              } 
-              
+                return _buildNoPlanSection(
+                  context,
+                  theme,
+                  isDark,
+                  localizations,
+                );
+              }
+
               // Check for expiration
               return FutureBuilder<bool>(
                 future: PlanService.isPlanExpired(),
                 builder: (context, expiredSnapshot) {
-                  if (expiredSnapshot.connectionState == ConnectionState.waiting) {
-                     return const Center(child: CircularProgressIndicator());
+                  if (expiredSnapshot.connectionState ==
+                      ConnectionState.waiting) {
+                    return const Center(child: CircularProgressIndicator());
                   }
 
                   final isExpired = expiredSnapshot.data ?? false;
                   if (isExpired) {
-                    return _buildExpiredPlanSection(context, theme, isDark, localizations);
+                    return _buildExpiredPlanSection(
+                      context,
+                      theme,
+                      isDark,
+                      localizations,
+                    );
                   }
 
                   // Show existing plan
                   return _buildTodayPlanSection(context, theme, localizations);
-                }
+                },
               );
             },
           ),
@@ -333,18 +337,18 @@ class _HomeContentState extends State<_HomeContent> {
                 style: theme.textTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.bold,
                   color: isDark ? Colors.white : Colors.black87,
-                  fontSize: 20
+                  fontSize: 20,
                 ),
                 textAlign: TextAlign.center,
               ),
-               const SizedBox(height: 8),
-               Text(
+              const SizedBox(height: 8),
+              Text(
                 'You have finished your workout plan.',
                 style: TextStyle(
                   color: isDark ? Colors.white70 : Colors.black54,
-                  fontSize: 14
+                  fontSize: 14,
                 ),
-                 textAlign: TextAlign.center,
+                textAlign: TextAlign.center,
               ),
               const SizedBox(height: 32),
               // Option 1: Pickup a new plan
@@ -352,7 +356,7 @@ class _HomeContentState extends State<_HomeContent> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () async {
-                    // Clear old plan first? Or just overwriting is fine. 
+                    // Clear old plan first? Or just overwriting is fine.
                     // PlanService.saveProgramPlan overwrites.
                     await context.push('/workout');
                     // Refresh plan status when returning
@@ -370,10 +374,7 @@ class _HomeContentState extends State<_HomeContent> {
                   ),
                   child: const Text(
                     'Pickup a New Plan',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
@@ -391,10 +392,7 @@ class _HomeContentState extends State<_HomeContent> {
                   },
                   style: OutlinedButton.styleFrom(
                     foregroundColor: const Color(0xFFD5FF5F),
-                    side: const BorderSide(
-                      color: Color(0xFFD5FF5F),
-                      width: 2,
-                    ),
+                    side: const BorderSide(color: Color(0xFFD5FF5F), width: 2),
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
@@ -402,10 +400,7 @@ class _HomeContentState extends State<_HomeContent> {
                   ),
                   child: const Text(
                     'Create Custom Plan',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
@@ -416,13 +411,8 @@ class _HomeContentState extends State<_HomeContent> {
     );
   }
 
-
-
   /// Builds message when no exercises are scheduled for today
-  Widget _buildNoExercisesMessage(
-    BuildContext context,
-    ThemeData theme,
-  ) {
+  Widget _buildNoExercisesMessage(BuildContext context, ThemeData theme) {
     final isDark = theme.brightness == Brightness.dark;
 
     return Container(
@@ -475,7 +465,7 @@ class _HomeContentState extends State<_HomeContent> {
             color: isDark ? const Color(0xFF2C2C2E) : Colors.grey[100],
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: const Color(0xFFD5FF5F).withValues(alpha:0.3),
+              color: const Color(0xFFD5FF5F).withValues(alpha: 0.3),
               width: 1,
             ),
           ),
@@ -517,10 +507,7 @@ class _HomeContentState extends State<_HomeContent> {
                   ),
                   child: const Text(
                     'Pick a Workout Plan',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
@@ -538,10 +525,7 @@ class _HomeContentState extends State<_HomeContent> {
                   },
                   style: OutlinedButton.styleFrom(
                     foregroundColor: const Color(0xFFD5FF5F),
-                    side: const BorderSide(
-                      color: Color(0xFFD5FF5F),
-                      width: 2,
-                    ),
+                    side: const BorderSide(color: Color(0xFFD5FF5F), width: 2),
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
@@ -549,10 +533,7 @@ class _HomeContentState extends State<_HomeContent> {
                   ),
                   child: const Text(
                     'Create Custom Plan',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
@@ -577,18 +558,11 @@ class _HomeContentState extends State<_HomeContent> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         color: darkOliveGreen,
-        border: Border.all(
-          color: neonYellowGreen,
-          width: 2,
-        ),
+        border: Border.all(color: neonYellowGreen, width: 2),
       ),
       child: Column(
         children: [
-          const Icon(
-            Icons.nightlight_round,
-            color: Colors.white,
-            size: 48,
-          ),
+          const Icon(Icons.nightlight_round, color: Colors.white, size: 48),
           const SizedBox(height: 16),
           const Text(
             'Rest Day',
@@ -602,10 +576,7 @@ class _HomeContentState extends State<_HomeContent> {
           Text(
             workoutDay['workoutCount'] as String? ?? 'Take a break!',
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 16,
-              color: Colors.white70,
-            ),
+            style: const TextStyle(fontSize: 16, color: Colors.white70),
           ),
         ],
       ),
@@ -625,10 +596,7 @@ class _HomeContentState extends State<_HomeContent> {
       decoration: BoxDecoration(
         color: isDark ? const Color(0xFF2C2C2E) : Colors.grey[100],
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: neonYellowGreen,
-          width: 2,
-        ),
+        border: Border.all(color: neonYellowGreen, width: 2),
       ),
       child: Column(
         children: [
@@ -655,7 +623,9 @@ class _HomeContentState extends State<_HomeContent> {
               style: OutlinedButton.styleFrom(
                 foregroundColor: neonYellowGreen,
                 side: const BorderSide(color: neonYellowGreen),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
               ),
               child: const Text('SEE STATS'),
             ),
@@ -675,7 +645,7 @@ class _HomeContentState extends State<_HomeContent> {
       future: PlanService.isWorkoutCompletedForToday(),
       builder: (context, completedSnapshot) {
         final isCompleted = completedSnapshot.data ?? false;
-        
+
         if (isCompleted) {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -694,32 +664,8 @@ class _HomeContentState extends State<_HomeContent> {
 
         return FutureBuilder<Map<String, dynamic>?>(
           future: PlanService.getPlan(),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                localizations?.todayPlan ?? 'Today Plan',
-                style: theme.textTheme.titleLarge?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 16),
-              const Center(child: CircularProgressIndicator()),
-            ],
-          );
-        }
-
-        final plan = snapshot.data;
-        if (plan == null) {
-          return _buildNoPlanSection(context, theme, theme.brightness == Brightness.dark, localizations);
-        }
-
-        return FutureBuilder<int?>(
-          future: PlanService.getCurrentDayIndex(),
-          builder: (context, daySnapshot) {
-            if (daySnapshot.connectionState == ConnectionState.waiting) {
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -735,139 +681,188 @@ class _HomeContentState extends State<_HomeContent> {
               );
             }
 
-            final dayIndex = daySnapshot.data ?? 0;
-            final workoutDays = plan['workoutDays'] as List?;
-            
-            if (workoutDays == null || workoutDays.isEmpty || dayIndex >= workoutDays.length) {
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    localizations?.todayPlan ?? 'Today Plan',
-                    style: theme.textTheme.titleLarge?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  const Text('No plan data available'),
-                ],
+            final plan = snapshot.data;
+            if (plan == null) {
+              return _buildNoPlanSection(
+                context,
+                theme,
+                theme.brightness == Brightness.dark,
+                localizations,
               );
             }
 
-            final todayWorkoutDay = Map<String, dynamic>.from(workoutDays[dayIndex] as Map);
-            final title = todayWorkoutDay['title'] as String? ?? '';
-            final isRestDay = title.toUpperCase().contains('REST');
-            final exercises = todayWorkoutDay['exercises'] as List? ?? [];
-
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      localizations?.todayPlan ?? 'Today Plan',
-                      style: theme.textTheme.titleLarge?.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFD5FF5F).withValues(alpha:0.2),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        todayWorkoutDay['day'] as String? ?? '',
-                        style: const TextStyle(
-                          color: Color(0xFFD5FF5F),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 12,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 16),
-                if (isRestDay)
-                  _buildRestDayMessage(context, theme, todayWorkoutDay)
-                else if (exercises.isEmpty)
-                  _buildNoExercisesMessage(context, theme)
-                else
-                  Column(
+            return FutureBuilder<int?>(
+              future: PlanService.getCurrentDayIndex(),
+              builder: (context, daySnapshot) {
+                if (daySnapshot.connectionState == ConnectionState.waiting) {
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Exercise cards list - scrollable, showing only 3 initially
-                      SizedBox(
-                        height: 384, 
-                        child: ListView.builder(
-                          scrollDirection: Axis.vertical,
-                          itemCount: exercises.length,
-                          itemBuilder: (context, index) {
-                            final exerciseData = Map<String, dynamic>.from(exercises[index] as Map);
-                            // Get sets and reps from exercise data, or use default
-                            final sets = exerciseData['sets'] as int? ?? 3;
-                            final reps = exerciseData['reps'] as String? ?? '12-10-8';
-                            final setsRepsText = '$sets Sets $reps Reps';
-                            
-                            return Padding(
-                              padding: const EdgeInsets.only(bottom: 16),
-                              child: PlanExerciseCard(
-                                imagePath: exerciseData['mainImageUrl'] as String? ?? 'assets/Rectangle 53.png',
-                                exerciseName: exerciseData['name'] as String? ?? 'Exercise',
-                                setsReps: setsRepsText,
-                                isDark: theme.brightness == Brightness.dark,
-                              ),
-                            );
-                          },
+                      Text(
+                        localizations?.todayPlan ?? 'Today Plan',
+                        style: theme.textTheme.titleLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(height: 24),
-                      // Start Workout button
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            // Navigate to workout session with today's exercises
-                            // Convert List<dynamic> to List<Map<String, dynamic>>
-                            final exercisesList = exercises
-                                .map((e) => e as Map<String, dynamic>)
-                                .toList();
-                            context.push(
-                              '/workout/session',
-                              extra: {
-                                'exercises': exercisesList,
-                                'dayTitle': title,
-                              },
-                            );
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFFD5FF5F), 
-                            foregroundColor: Colors.black,
-                            padding: const EdgeInsets.symmetric(vertical: 18),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            elevation: 0,
+                      const SizedBox(height: 16),
+                      const Center(child: CircularProgressIndicator()),
+                    ],
+                  );
+                }
+
+                final dayIndex = daySnapshot.data ?? 0;
+                final workoutDays = plan['workoutDays'] as List?;
+
+                if (workoutDays == null ||
+                    workoutDays.isEmpty ||
+                    dayIndex >= workoutDays.length) {
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        localizations?.todayPlan ?? 'Today Plan',
+                        style: theme.textTheme.titleLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      const Text('No plan data available'),
+                    ],
+                  );
+                }
+
+                final todayWorkoutDay = Map<String, dynamic>.from(
+                  workoutDays[dayIndex] as Map,
+                );
+                final title = todayWorkoutDay['title'] as String? ?? '';
+                final isRestDay = title.toUpperCase().contains('REST');
+                final exercises = todayWorkoutDay['exercises'] as List? ?? [];
+
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          localizations?.todayPlan ?? 'Today Plan',
+                          style: theme.textTheme.titleLarge?.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 6,
+                          ),
+                          decoration: BoxDecoration(
+                            color: const Color(
+                              0xFFD5FF5F,
+                            ).withValues(alpha: 0.2),
+                            borderRadius: BorderRadius.circular(12),
                           ),
                           child: Text(
-                            localizations?.startWorkoutButton ?? 'Start Workout',
+                            todayWorkoutDay['day'] as String? ?? '',
                             style: const TextStyle(
-                              fontSize: 18,
+                              color: Color(0xFFD5FF5F),
                               fontWeight: FontWeight.bold,
+                              fontSize: 12,
                             ),
                           ),
                         ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    if (isRestDay)
+                      _buildRestDayMessage(context, theme, todayWorkoutDay)
+                    else if (exercises.isEmpty)
+                      _buildNoExercisesMessage(context, theme)
+                    else
+                      Column(
+                        children: [
+                          // Exercise cards list - scrollable, showing only 3 initially
+                          SizedBox(
+                            height: 384,
+                            child: ListView.builder(
+                              scrollDirection: Axis.vertical,
+                              itemCount: exercises.length,
+                              itemBuilder: (context, index) {
+                                final exerciseData = Map<String, dynamic>.from(
+                                  exercises[index] as Map,
+                                );
+                                // Get sets and reps from exercise data, or use default
+                                final sets = exerciseData['sets'] as int? ?? 3;
+                                final reps =
+                                    exerciseData['reps'] as String? ??
+                                    '12-10-8';
+                                final setsRepsText = '$sets Sets $reps Reps';
+
+                                return Padding(
+                                  padding: const EdgeInsets.only(bottom: 16),
+                                  child: PlanExerciseCard(
+                                    imagePath:
+                                        exerciseData['mainImageUrl']
+                                            as String? ??
+                                        'assets/Rectangle 53.png',
+                                    exerciseName:
+                                        exerciseData['name'] as String? ??
+                                        'Exercise',
+                                    setsReps: setsRepsText,
+                                    isDark: theme.brightness == Brightness.dark,
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                          const SizedBox(height: 24),
+                          // Start Workout button
+                          SizedBox(
+                            width: double.infinity,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                // Navigate to workout session with today's exercises
+                                // Convert List<dynamic> to List<Map<String, dynamic>>
+                                final exercisesList = exercises
+                                    .map((e) => e as Map<String, dynamic>)
+                                    .toList();
+                                context.push(
+                                  '/workout/session',
+                                  extra: {
+                                    'exercises': exercisesList,
+                                    'dayTitle': title,
+                                  },
+                                );
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xFFD5FF5F),
+                                foregroundColor: Colors.black,
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 18,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                elevation: 0,
+                              ),
+                              child: Text(
+                                localizations?.startWorkoutButton ??
+                                    'Start Workout',
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-              ],
+                  ],
+                );
+              },
             );
           },
         );
       },
     );
-      },
-    );
   }
-
 }

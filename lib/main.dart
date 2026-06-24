@@ -14,6 +14,8 @@ import 'core/providers/locale_provider.dart';
 import 'core/router/app_router.dart';
 import 'core/services/auth_service.dart';
 import 'core/services/user_service.dart';
+import 'core/config/app_config.dart';
+import 'core/services/mock_auth_service.dart';
 
 /// Main application entry point function
 ///
@@ -25,6 +27,11 @@ void main() async {
   
   // Initialize shared preferences for persistent storage
   final prefs = await SharedPreferences.getInstance();
+  
+  // Load mock tokens from storage (for mock backend)
+  if (AppConfig.useMockBackend) {
+    await MockAuthService.loadTokens();
+  }
   
   // Run the application with MultiProvider for state management
   runApp(

@@ -3,6 +3,7 @@
 /// Provides high-level data access methods with support for both real backend
 /// API and mock backend (for testing without network connection).
 library;
+import 'package:flutter/foundation.dart';
 import 'package:boda_new/core/models/body_log.dart';
 import 'package:boda_new/core/models/workout_log.dart';
 import 'package:boda_new/core/services/body_log_service.dart';
@@ -114,13 +115,15 @@ class DataService {
   
   // --- Workout Logs ---
 
-  /// Gets all workout logs
+   /// Gets all workout logs
   /// 
   /// Returns workout logs sorted by date in descending order (newest first)
   Future<List<WorkoutLog>> getWorkoutLogs() async {
     if (AppConfig.useMockBackend) {
       final prefs = await SharedPreferences.getInstance();
       final logsJson = prefs.getStringList(_mockWorkoutLogsKey) ?? [];
+      debugPrint('Number of logs in SharedPreferences: ${logsJson.length}');
+      debugPrint('Logs JSON: $logsJson');
       final logs = logsJson.map((s) => WorkoutLog.fromJson(jsonDecode(s))).toList();
       return logs..sort((a, b) => b.date.compareTo(a.date));
     }
@@ -133,7 +136,7 @@ class DataService {
     return logs..sort((a, b) => b.date.compareTo(a.date));
   }
 
-  /// Saves a workout log
+   /// Saves a workout log
   /// 
   /// Handles both create and update operations. If a log with the same ID exists,
   /// it will be updated; otherwise, a new log will be created.
@@ -141,6 +144,8 @@ class DataService {
   /// Parameters:
   /// - log: WorkoutLog to save
   Future<void> saveWorkoutLog(WorkoutLog log) async {
+    debugPrint('DataService.saveWorkoutLog called');
+    debugPrint('useMockBackend: ${AppConfig.useMockBackend}');
     if (AppConfig.useMockBackend) {
       final prefs = await SharedPreferences.getInstance();
       final logs = await getWorkoutLogs();
@@ -148,12 +153,15 @@ class DataService {
 
       if (index != -1) {
         logs[index] = log;
+        debugPrint('Updating existing log');
       } else {
         logs.add(log);
+        debugPrint('Adding new log');
       }
       
       final logsJson = logs.map((l) => jsonEncode(l.toJson())).toList();
       await prefs.setStringList(_mockWorkoutLogsKey, logsJson);
+      debugPrint('Logs saved to SharedPreferences: ${logsJson.length} logs');
       return;
     }
 

@@ -99,10 +99,10 @@ class _HistoryCalendarState extends State<HistoryCalendar> {
                video.workoutName,
                style: TextStyle(color: isDark ? Colors.white : Colors.black),
              ),
-             subtitle: Text(
-               '${video.exercises.length} Exercises • ${video.durationSeconds ~/ 60} mins',
-                style: TextStyle(color: isDark ? Colors.grey : Colors.black54),
-             ),
+              subtitle: Text(
+                '${video.exercises.map((e) => e.exerciseName).toSet().length} Exercises • ${video.durationSeconds ~/ 60} mins',
+                 style: TextStyle(color: isDark ? Colors.grey : Colors.black54),
+              ),
              leading: const Icon(Icons.fitness_center, color: Color(0xFFD5FF5F)),
            )),
            if (_getWorkoutsForDay(_selectedDay!).isEmpty)

@@ -1,4 +1,4 @@
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'mock_auth_service.dart';
 
 /// Mock user service for testing without backend
@@ -16,9 +16,12 @@ class MockUserService {
   Future<Map<String, dynamic>?> getCurrentUser() async {
     await _delay();
 
-    final prefs = await SharedPreferences.getInstance();
-    final token = prefs.getString('auth_token');
+    // Use FlutterSecureStorage to match AuthService implementation
+    const storage = FlutterSecureStorage();
+    final token = await storage.read(key: 'auth_token');
     
+    // Load tokens from storage before checking
+    await MockAuthService.loadTokens();
     final user = MockAuthService.getCurrentUser(token);
     if (user == null) {
       return null;
@@ -47,8 +50,8 @@ class MockUserService {
   }) async {
     await _delay();
 
-    final prefs = await SharedPreferences.getInstance();
-    final token = prefs.getString('auth_token');
+    const storage = FlutterSecureStorage();
+    final token = await storage.read(key: 'auth_token');
     
     final user = MockAuthService.getCurrentUser(token);
     if (user == null) {
@@ -92,8 +95,8 @@ class MockUserService {
   Future<Map<String, dynamic>> getOnboarding() async {
     await _delay();
 
-    final prefs = await SharedPreferences.getInstance();
-    final token = prefs.getString('auth_token');
+    const storage = FlutterSecureStorage();
+    final token = await storage.read(key: 'auth_token');
     
     final user = MockAuthService.getCurrentUser(token);
     if (user == null) {
@@ -127,8 +130,8 @@ class MockUserService {
   }) async {
     await _delay();
 
-    final prefs = await SharedPreferences.getInstance();
-    final token = prefs.getString('auth_token');
+    const storage = FlutterSecureStorage();
+    final token = await storage.read(key: 'auth_token');
     
     final user = MockAuthService.getCurrentUser(token);
     if (user == null) {

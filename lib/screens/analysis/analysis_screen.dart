@@ -2,8 +2,7 @@ import 'package:boda_new/core/models/body_log.dart';
 import 'package:boda_new/core/models/workout_log.dart';
 import 'package:boda_new/services/data_service.dart';
 import 'package:boda_new/screens/analysis/widgets/history_calendar.dart';
-import 'package:boda_new/screens/analysis/widgets/pr_list.dart';
-import 'package:boda_new/screens/analysis/widgets/strength_chart.dart';
+import 'package:boda_new/screens/analysis/widgets/body_weight_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -11,10 +10,9 @@ import 'package:boda_new/core/services/user_service.dart';
 
 /// Analysis and tracking screen for fitness progress
 /// 
-/// Provides three main tabs:
+/// Provides two main tabs:
 /// - Overview: Shows weight tracking chart and recent body measurements
 /// - History: Displays workout history calendar
-/// - PRs: Lists personal records for exercises
 class AnalysisScreen extends StatefulWidget {
   const AnalysisScreen({super.key});
 
@@ -28,7 +26,6 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
 
   List<BodyLog> _bodyLogs = [];
   List<WorkoutLog> _workoutLogs = [];
-  List<ExerciseSetLog> _prs = [];
   bool _isLoading = true;
   double? _targetWeight;
   String? _weightGoal;
@@ -36,7 +33,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 2, vsync: this);
     _tabController.addListener(() {
       if (mounted) setState(() {}); // To update FAB visibility
       if (_tabController.indexIsChanging) {
@@ -53,13 +50,11 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
     setState(() => _isLoading = true);
     final bodyLogs = await _dataService.getBodyLogs();
     final workoutLogs = await _dataService.getWorkoutLogs();
-    final prs = await _dataService.getPersonalRecords();
 
     if (!mounted) return;
     setState(() {
       _bodyLogs = bodyLogs;
       _workoutLogs = workoutLogs;
-      _prs = prs;
       _isLoading = false;
     });
 
@@ -163,6 +158,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
       // App Bar with tab navigation
       appBar: AppBar(
         title: const Text('Analysis'),
+        centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
         bottom: TabBar(
@@ -173,7 +169,6 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
             tabs: const [
               Tab(text: 'Overview'),
               Tab(text: 'History'),
-              Tab(text: 'PRs'),
             ],
           ),
       ),
@@ -185,7 +180,6 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
               children: [
                 _buildOverviewTab(isDark),
                 _buildHistoryTab(isDark),
-                _buildPrTab(isDark),
               ],
             ),
       // Floating action button to add measurements (only on Overview tab)
@@ -234,7 +228,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
                   color: isDark ? const Color(0xFF2A2A2A) : Colors.grey[100],
                   borderRadius: BorderRadius.circular(16),
                 ),
-                child: StrengthChart(
+                child: Body_Weight_Chart(
                   data: chartData,
                   metric: 'maxWeight',
                   title: 'Body Weight (kg)',
@@ -296,17 +290,6 @@ class _AnalysisScreenState extends State<AnalysisScreen> with SingleTickerProvid
           padding: const EdgeInsets.all(20.0),
           child: HistoryCalendar(workoutLogs: _workoutLogs),
         ),
-      ),
-    );
-  }
-
-  /// Builds the PRs tab with personal records list
-  Widget _buildPrTab(bool isDark) {
-    return RefreshIndicator(
-      onRefresh: _loadData,
-      child: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        child: PrList(prs: _prs),
       ),
     );
   }

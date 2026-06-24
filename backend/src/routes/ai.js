@@ -9,7 +9,7 @@ const authenticateToken = require('../middleware/auth');
 const router = express.Router();
 
 // Hugging Face API endpoint for food image classification
-const HF_MODEL_URL = "https://api-inference.huggingface.co/models/nateraw/food";
+const HF_MODEL_URL = "https://router.huggingface.co/hf-inference/models/nateraw/food";
 
 /**
  * Analyzes a food image using Hugging Face API for classification.

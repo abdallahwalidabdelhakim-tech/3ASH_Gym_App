@@ -131,7 +131,7 @@ class AuthService {
             throw new Error('User with this email not found');
         }
 
-        const code = Math.floor(100000 + Math.random() * 900000).toString(); // 6-digit code
+        const code = Math.floor(1000 + Math.random() * 9000).toString(); // 4-digit code
         const expiresAt = Date.now() + 15 * 60 * 1000; // 15 minutes
 
         const codeHash = await bcrypt.hash(code, 5); // reduced rounds for speed on temp codes

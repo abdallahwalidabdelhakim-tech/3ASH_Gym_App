@@ -15,96 +15,50 @@ class ProgramDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Determine if we are in dark mode to style the app bar correctly
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      backgroundColor: isDark ? const Color(0xFF1A1A1A) : const Color(0xFFF5F5F5),
-      body: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            expandedHeight: 300,
-            pinned: true,
-            backgroundColor: isDark ? const Color(0xFF1A1A1A) : Colors.white,
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back, color: Colors.white),
-              onPressed: () => context.pop(),
-            ),
-            flexibleSpace: FlexibleSpaceBar(
-              background: Stack(
-                fit: StackFit.expand,
-                children: [
-                  Image.asset(
-                    program.imagePath,
-                    fit: BoxFit.cover,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          Colors.transparent,
-                          Colors.black.withValues(alpha:0.7),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    bottom: 40,
-                    left: 20,
-                    right: 20,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          program.title,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                        const SizedBox(height: 16),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 16, vertical: 8),
-                          decoration: BoxDecoration(
-                            color: Colors.white.withValues(alpha:0.2),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              const Icon(Icons.local_fire_department,
-                                  color: Color(0xFFD5FF5F), size: 20),
-                              const Icon(Icons.local_fire_department,
-                                  color: Color(0xFFD5FF5F), size: 20),
-                              const Icon(Icons.local_fire_department,
-                                  color: Color(0xFFD5FF5F), size: 20),
-                              const Icon(Icons.local_fire_department,
-                                  color: Colors.grey, size: 20),
-                              const SizedBox(width: 12),
-                              const Icon(Icons.calendar_today,
-                                  color: Color(0xFFD5FF5F), size: 20),
-                              const SizedBox(width: 4),
-                              Text(
-                                program.duration,
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
+      backgroundColor: isDark ? const Color(0xFF1A1A1A) : Colors.white,
+      appBar: AppBar(
+        backgroundColor: isDark ? const Color(0xFF1A1A1A) : Colors.white,
+        elevation: 0,
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(
+            Icons.home,
+            color: isDark ? Colors.white : Colors.black,
+            size: 24,
           ),
+          onPressed: () => context.go('/home'),
+        ),
+        title: const Text(
+          'Program Details',
+          style: TextStyle(
+            color: Color.fromARGB(255, 255, 255, 255),
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+          ),
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.arrow_forward_ios,
+              color: isDark ? Colors.white : Colors.black,
+              size: 18,
+            ),
+            onPressed: () {
+              if (context.canPop()) {
+                context.pop();
+              } else {
+                context.go('/home');
+              }
+            },
+          ),
+        ],
+      ),
+  body: CustomScrollView(
+        slivers: [
           SliverToBoxAdapter(
             child: DecoratedBox(
               decoration: BoxDecoration(
@@ -115,10 +69,25 @@ class ProgramDetailsScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: [
+                    ...program.workoutDays.asMap().entries.map((entry) {
+                      final index = entry.key;
+                      final workoutDay = entry.value;
+                      return Column(
+                        children: [
+                          if (index > 0) const SizedBox(height: 16),
+                          _buildDayCard(
+                            context,
+                            workoutDay: workoutDay,
+                            isDark: isDark,
+                          ),
+                        ],
+                      );
+                    }),
+                    const SizedBox(height: 24),
                     // Select Program Button
                     Container(
                       width: double.infinity,
-                      margin: const EdgeInsets.only(bottom: 24),
+                      margin: const EdgeInsets.only(bottom: 32),
                       child: ElevatedButton(
                         onPressed: () => _selectProgram(context),
                         style: ElevatedButton.styleFrom(
@@ -138,20 +107,6 @@ class ProgramDetailsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    ...program.workoutDays.asMap().entries.map((entry) {
-                      final index = entry.key;
-                      final workoutDay = entry.value;
-                      return Column(
-                        children: [
-                          if (index > 0) const SizedBox(height: 16),
-                          _buildDayCard(
-                            context,
-                            workoutDay: workoutDay,
-                            isDark: isDark,
-                          ),
-                        ],
-                      );
-                    }),
                   ],
                 ),
               ),
@@ -178,7 +133,7 @@ class ProgramDetailsScreen extends StatelessWidget {
     
     return GestureDetector(
       onTap: hasExercises ? () {
-        context.go('/workout/day-exercises', extra: {'workoutDay': workoutDay, 'program': program});
+        context.push('/workout/day-exercises', extra: {'workoutDay': workoutDay, 'program': program});
       } : null,
       child: Container(
       padding: const EdgeInsets.all(16),
@@ -198,8 +153,8 @@ class ProgramDetailsScreen extends StatelessWidget {
         children: [
           // Anatomy Image
           SizedBox(
-            width: 150,
-            height: 170,
+            width: 100,  // Optimal width for 1:2 aspect ratio
+            height: 130,  // Perfect height matching 1:2 aspect ratio
             child: Image.asset(
               workoutDay.imagePath,
               fit: BoxFit.contain,

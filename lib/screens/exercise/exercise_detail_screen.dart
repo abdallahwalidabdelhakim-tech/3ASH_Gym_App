@@ -213,7 +213,7 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
                               height: 24,
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
-                                color: neonGreen.withValues(alpha:0.1),
+                                color: const Color(0xFFD0FD3E).withValues(alpha:0.1),
                                 shape: BoxShape.circle,
                               ),
                               child: Text(

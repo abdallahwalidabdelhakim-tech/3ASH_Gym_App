@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:video_player/video_player.dart';
 import '../../core/services/plan_service.dart';
 import '../../services/data_service.dart';
 import '../../core/models/workout_log.dart';
@@ -24,6 +25,7 @@ class _WorkoutSessionScreenState extends State<WorkoutSessionScreen> {
   int _currentExerciseIndex = 0;
   late Stopwatch _stopwatch;
   late final Stream<String> _timerStream;
+  late VideoPlayerController _videoController;
 
   @override
   void initState() {
@@ -35,12 +37,35 @@ class _WorkoutSessionScreenState extends State<WorkoutSessionScreen> {
       final seconds = duration.inSeconds.remainder(60).toString().padLeft(2, '0');
       return '$minutes:$seconds';
     });
+    
+    // Initialize video controller
+    _initializeVideoController();
   }
 
   @override
   void dispose() {
     _stopwatch.stop();
+    _videoController.dispose();
     super.dispose();
+  }
+
+  /// Initializes the video controller for the current exercise
+  void _initializeVideoController() {
+    final currentExercise = widget.exercises[_currentExerciseIndex];
+    final videoUrl = currentExercise['videoUrl'] as String? ?? 'assets/videos/bench_press_cable.mp4';
+    
+    _videoController = VideoPlayerController.asset(videoUrl)
+      ..initialize().then((_) {
+        setState(() {});
+        _videoController.setLooping(true);
+        _videoController.play();
+      });
+  }
+
+  /// Updates the video controller when exercise changes
+  void _updateVideoController() {
+    _videoController.dispose();
+    _initializeVideoController();
   }
 
   /// Navigates to the previous exercise if there is one
@@ -48,6 +73,7 @@ class _WorkoutSessionScreenState extends State<WorkoutSessionScreen> {
     if (_currentExerciseIndex > 0) {
       setState(() {
         _currentExerciseIndex--;
+        _updateVideoController();
       });
     }
   }
@@ -57,6 +83,7 @@ class _WorkoutSessionScreenState extends State<WorkoutSessionScreen> {
     if (_currentExerciseIndex < widget.exercises.length - 1) {
       setState(() {
         _currentExerciseIndex++;
+        _updateVideoController();
       });
     }
   }
@@ -139,7 +166,11 @@ class _WorkoutSessionScreenState extends State<WorkoutSessionScreen> {
 
   /// Saves the workout log to storage
   Future<void> _saveWorkoutLog() async {
+    debugPrint('Starting to save workout log');
     final dataService = DataService();
+    
+    debugPrint('Number of exercises: ${widget.exercises.length}');
+    debugPrint('Exercises data: $widget.exercises');
     
     // Create exercise logs
     final List<ExerciseSetLog> exerciseLogs = [];
@@ -170,7 +201,10 @@ class _WorkoutSessionScreenState extends State<WorkoutSessionScreen> {
       exercises: exerciseLogs,
     );
 
+    debugPrint('Workout log created: ${workoutLog.toJson()}');
+    
     await dataService.saveWorkoutLog(workoutLog);
+    debugPrint('Workout log saved successfully');
   }
 
 
@@ -201,7 +235,6 @@ class _WorkoutSessionScreenState extends State<WorkoutSessionScreen> {
 
     final currentExercise = widget.exercises[_currentExerciseIndex];
     final exerciseName = currentExercise['name'] as String? ?? 'Exercise';
-    final imageUrl = currentExercise['mainImageUrl'] as String? ?? 'assets/Rectangle 53.png';
     final reps = currentExercise['reps'] as String? ?? '12-10-8';
     final repsText = '$reps Repeats';
 
@@ -244,28 +277,27 @@ class _WorkoutSessionScreenState extends State<WorkoutSessionScreen> {
       ),
       body: Column(
         children: [
-          // Exercise illustration
+           // Exercise video
           Expanded(
             child: Container(
               width: double.infinity,
               color: Colors.white,
               child: Center(
-                child: Image.asset(
-                  imageUrl,
-                  fit: BoxFit.contain,
-                  errorBuilder: (context, error, stackTrace) {
-                    return Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      color: Colors.grey[200],
-                      child: const Icon(
-                        Icons.fitness_center,
-                        size: 100,
-                        color: Colors.grey,
+                child: _videoController.value.isInitialized
+                    ? AspectRatio(
+                        aspectRatio: _videoController.value.aspectRatio,
+                        child: VideoPlayer(_videoController),
+                      )
+                    : Container(
+                        width: double.infinity,
+                        height: double.infinity,
+                        color: Colors.grey[200],
+                        child: const Icon(
+                          Icons.fitness_center,
+                          size: 100,
+                          color: Colors.grey,
+                        ),
                       ),
-                    );
-                  },
-                ),
               ),
             ),
           ),

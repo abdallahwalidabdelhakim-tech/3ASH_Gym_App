@@ -32,7 +32,7 @@ class DayExercisesScreen extends StatelessWidget {
             color: isDark ? Colors.white : Colors.black,
           ),
           onPressed: () {
-            context.go('/workout/details', extra: program);
+            context.pop();
           },
         ),
         title: Text(
@@ -105,15 +105,6 @@ class DayExercisesScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 24),
-                  Text(
-                    'Exercises (${workoutDay.exercises.length})',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: isDark ? Colors.white : Colors.black,
-                    ),
-                  ),
                   const SizedBox(height: 16),
                   Expanded(
                     child: GridView.builder(
@@ -143,7 +134,7 @@ class DayExercisesScreen extends StatelessWidget {
                         // Convert Exercise objects to Map format expected by WorkoutSessionScreen
                         final sessionExercises = workoutDay.exercises.map((e) => {
                           'name': e.name,
-                          'mainImageUrl': e.mainImageUrl,
+                          'videoUrl': e.videoUrl, // Add video URL for new video functionality
                           'reps': '12-10-8', // Default reps as it's not in Exercise model yet
                         }).toList();
 

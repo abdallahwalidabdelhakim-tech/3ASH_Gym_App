@@ -3,6 +3,7 @@
 /// Defines all app routes and their navigation behavior using GoRouter.
 /// Handles route definitions, parameters, and nested routes for workout features.
 library;
+
 import 'package:go_router/go_router.dart';
 import '../../screens/splash/splash_screen.dart';
 import '../../screens/auth/login_screen.dart';
@@ -25,7 +26,11 @@ import '../../screens/settings/privacy_screen.dart';
 import '../../screens/workout/create_custom_plan_screen.dart';
 import '../../screens/analysis/analysis_screen.dart';
 import '../../screens/food_ai_screen.dart';
-
+import '../../screens/tools/tools_screen.dart';
+import '../../screens/tools/bmi_calculator_screen.dart';
+import '../../screens/tools/calorie_calculator_screen.dart';
+import '../../screens/tools/heart_rate_zones_screen.dart';
+import '../../screens/tools/nutrition_guide_screen.dart';
 
 class AppRouter {
   /// The main GoRouter instance configured with all app routes
@@ -39,7 +44,7 @@ class AppRouter {
         name: 'splash',
         builder: (context, state) => const SplashScreen(),
       ),
-      
+
       /// Authentication routes
       GoRoute(
         path: '/login',
@@ -71,34 +76,34 @@ class AppRouter {
         name: 'change-password',
         builder: (context, state) => const ChangePasswordScreen(),
       ),
-      
+
       /// Main app routes
       GoRoute(
         path: '/home',
         name: 'home',
         builder: (context, state) => const HomeScreen(),
       ),
-      
+
       GoRoute(
         path: '/settings',
         name: 'settings',
         builder: (context, state) => const SettingsScreen(),
       ),
-      
+
       GoRoute(
         path: '/settings/privacy',
         name: 'privacy',
         builder: (context, state) => const PrivacyScreen(),
       ),
-      
+
       /// Workout management routes with nested children
       GoRoute(
         path: '/workout',
         name: 'workout',
         builder: (context, state) => const WorkoutScreen(),
         routes: [
-           /// Workout program details route
-           GoRoute(
+          /// Workout program details route
+          GoRoute(
             path: 'details',
             name: 'program-details',
             builder: (context, state) {
@@ -106,7 +111,7 @@ class AppRouter {
               return ProgramDetailsScreen(program: program);
             },
           ),
-          
+
           /// Day exercises route
           GoRoute(
             path: 'day-exercises',
@@ -115,10 +120,13 @@ class AppRouter {
               final data = state.extra as Map<String, dynamic>;
               final workoutDay = data['workoutDay'] as WorkoutDay;
               final program = data['program'] as WorkoutProgram;
-              return DayExercisesScreen(workoutDay: workoutDay, program: program);
+              return DayExercisesScreen(
+                workoutDay: workoutDay,
+                program: program,
+              );
             },
           ),
-          
+
           /// Workout session route
           GoRoute(
             path: 'session',
@@ -127,19 +135,22 @@ class AppRouter {
               final data = state.extra as Map<String, dynamic>;
               final exercises = data['exercises'] as List<Map<String, dynamic>>;
               final dayTitle = data['dayTitle'] as String? ?? 'Workout';
-              return WorkoutSessionScreen(exercises: exercises, dayTitle: dayTitle);
+              return WorkoutSessionScreen(
+                exercises: exercises,
+                dayTitle: dayTitle,
+              );
             },
           ),
         ],
       ),
-      
+
       /// Exercise library routes
       GoRoute(
         path: '/exercises',
         name: 'exercises',
         builder: (context, state) => const ExerciseLibraryScreen(),
       ),
-      
+
       GoRoute(
         path: '/exercises/:category',
         name: 'exercise-list',
@@ -148,28 +159,55 @@ class AppRouter {
           return ExerciseListScreen(categoryName: category);
         },
       ),
-      
+
       /// Custom plan creation route
       GoRoute(
         path: '/create-custom-plan',
         name: 'create-custom-plan',
         builder: (context, state) => const CreateCustomPlanScreen(),
       ),
-      
+
       /// Progress analysis route
       GoRoute(
         path: '/analysis',
         name: 'analysis',
         builder: (context, state) => const AnalysisScreen(),
       ),
-      
+
+      /// Tools screen routes
+      GoRoute(
+        path: '/tools',
+        name: 'tools',
+        builder: (context, state) => const ToolsScreen(),
+      ),
+      GoRoute(
+        path: '/tools/bmi-calculator',
+        name: 'bmi-calculator',
+        builder: (context, state) => const BmiCalculatorScreen(),
+      ),
+      GoRoute(
+        path: '/tools/calorie-calculator',
+        name: 'calorie-calculator',
+        builder: (context, state) => const CalorieCalculatorScreen(),
+      ),
+      GoRoute(
+        path: '/tools/heart-rate-zones',
+        name: 'heart-rate-zones',
+        builder: (context, state) => const HeartRateZonesScreen(),
+      ),
+      GoRoute(
+        path: '/tools/nutrition-guide',
+        name: 'nutrition-guide',
+        builder: (context, state) => const NutritionGuideScreen(),
+      ),
+
       /// AI camera feature route
       GoRoute(
         path: '/camera-ai',
         name: 'camera-ai',
         builder: (context, state) => const FoodAiScreen(),
       ),
-      
+
       /// Onboarding routes
       GoRoute(
         path: '/onboarding/step1',
@@ -182,4 +220,3 @@ class AppRouter {
     ],
   );
 }
-

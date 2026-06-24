@@ -168,15 +168,12 @@ class _OnboardingStep3AboutScreenState extends State<OnboardingStep3AboutScreen>
     }
 
     final data = OnboardingData(
-      goal: widget.initialData?.goal,
-      activityLevel: widget.initialData?.activityLevel,
       sex: _selectedSex,
       dateOfBirth: _selectedDate,
       age: _ageController.text.isNotEmpty ? int.tryParse(_ageController.text) : null,
       height: _heightController.text.isNotEmpty ? double.tryParse(_heightController.text) : null,
       weight: _weightController.text.isNotEmpty ? double.tryParse(_weightController.text) : null,
       targetWeight: _targetWeightController.text.isNotEmpty ? double.tryParse(_targetWeightController.text) : null,
-      objective: '0.5', // Default objective
     );
 
     _saveAndNavigate(data);
@@ -190,15 +187,12 @@ class _OnboardingStep3AboutScreenState extends State<OnboardingStep3AboutScreen>
       // Persist onboarding data using the real UserService
       final userService = context.read<UserService>();
       await userService.updateOnboarding(
-        goal: data.goal,
-        activityLevel: data.activityLevel,
         sex: data.sex,
         dateOfBirth: data.dateOfBirth?.toIso8601String(),
         age: data.age,
         height: data.height,
         weight: data.weight,
         targetWeight: data.targetWeight,
-        objective: data.objective,
       );
 
       // Save initial weight log to appear in Analysis screen
